@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 
 export default function ProgramsPage() {
   return (
-    <main className="min-h-screen bg-[#000b1d] pt-24">
+    <main className="min-h-screen bg-offwhite pt-24">
       <Navbar />
       <Programs />
       <CTA />

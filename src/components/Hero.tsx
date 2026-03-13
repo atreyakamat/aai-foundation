@@ -33,18 +33,18 @@ export default function Hero() {
     <section 
       ref={containerRef}
       id="hero" 
-      className="min-h-screen flex flex-col justify-center px-[5%] pt-36 pb-20 relative overflow-hidden bg-[#000b1d]"
+      className="min-h-screen flex flex-col justify-center px-[5%] pt-36 pb-20 relative overflow-hidden bg-offwhite"
     >
       {/* Magic UI Particles Background */}
       <Particles
         className="absolute inset-0 z-0"
         quantity={120}
         ease={80}
-        color="#ffffff"
+        color="#0b80be"
         refresh
       />
 
-      <div className="hero-grid-bg opacity-10"></div>
+      <div className="hero-grid-bg opacity-20"></div>
       
       {/* Background Shapes */}
       <motion.div 
@@ -53,7 +53,7 @@ export default function Hero() {
           rotate: [0, 5, 0],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="hero-shape w-[640px] h-[640px] -top-[200px] -right-[140px] bg-[radial-gradient(circle,rgba(11,128,190,0.15),transparent_70%)]" 
+        className="hero-shape w-[640px] h-[640px] -top-[200px] -right-[140px] bg-[radial-gradient(circle,rgba(11,128,190,0.1),transparent_70%)]" 
       />
       
       {/* Professional Success Dashboard (Right Side) */}
@@ -68,19 +68,19 @@ export default function Hero() {
           <motion.div 
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-white/5 backdrop-blur-xl rounded-[32px] shadow-[0_32px_80px_rgba(0,0,0,0.4)] border border-white/10 p-8 relative overflow-hidden"
+            className="bg-white rounded-[32px] shadow-[0_24px_50px_rgba(0,39,127,0.08)] border border-border p-8 relative overflow-hidden"
           >
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue/20 rounded-xl flex items-center justify-center border border-blue/30">
+                <div className="w-12 h-12 bg-blue/10 rounded-xl flex items-center justify-center border border-blue/20">
                   <TrendingUp className="text-blue" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-lg leading-tight">Innovation Index</h4>
-                  <p className="text-white/50 text-xs font-medium">Monthly Impact Report</p>
+                  <h4 className="text-navy font-bold text-lg leading-tight">Innovation Index</h4>
+                  <p className="text-muted text-xs font-medium">Monthly Impact Report</p>
                 </div>
               </div>
-              <div className="bg-green-500/10 text-green-400 border border-green-500/20 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+              <div className="bg-green-500/10 text-green-600 border border-green-500/20 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                 +12.5% <TrendingUp size={12} />
               </div>
             </div>
@@ -93,9 +93,9 @@ export default function Hero() {
                   initial={{ height: 0 }}
                   animate={{ height: `${h}%` }}
                   transition={{ delay: 0.5 + (i * 0.1), duration: 1 }}
-                  className="flex-1 bg-gradient-to-t from-blue/10 to-blue/60 rounded-t-md relative group border-t border-x border-white/5"
+                  className="flex-1 bg-gradient-to-t from-blue/5 to-blue/40 rounded-t-md relative group border-t border-x border-border/30"
                 >
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-blue text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-navy text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                     {h}%
                   </div>
                 </motion.div>
@@ -103,32 +103,32 @@ export default function Hero() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/5 rounded-2xl p-4 border border-white/5">
-                <p className="text-white/40 text-[10px] font-bold uppercase tracking-wider mb-1">Active Projects</p>
-                <p className="text-white text-xl font-black">240+</p>
+              <div className="bg-offwhite rounded-2xl p-4 border border-border/50">
+                <p className="text-muted text-[10px] font-bold uppercase tracking-wider mb-1">Active Projects</p>
+                <p className="text-navy text-xl font-black">240+</p>
               </div>
-              <div className="bg-white/5 rounded-2xl p-4 border border-white/5">
-                <p className="text-white/40 text-[10px] font-bold uppercase tracking-wider mb-1">Funding Raised</p>
-                <p className="text-white text-xl font-black">₹8.4M</p>
+              <div className="bg-offwhite rounded-2xl p-4 border border-border/50">
+                <p className="text-muted text-[10px] font-bold uppercase tracking-wider mb-1">Funding Raised</p>
+                <p className="text-navy text-xl font-black">₹8.4M</p>
               </div>
             </div>
 
             {/* Decorative Overlay */}
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue/10 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue/5 to-transparent pointer-events-none" />
           </motion.div>
 
           {/* Floating Mini Card 1: Users */}
           <motion.div
             animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-12 -left-12 bg-[#0a192f] rounded-2xl shadow-2xl border border-white/10 p-4 flex items-center gap-3 z-20"
+            className="absolute -top-12 -left-12 bg-white rounded-2xl shadow-xl border border-border p-4 flex items-center gap-3 z-20"
           >
-            <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center border border-accent/30">
+            <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center border border-accent/20">
               <Users className="text-accent" size={20} />
             </div>
             <div>
-              <p className="text-white font-bold text-sm">1,200+</p>
-              <p className="text-white/50 text-[10px] font-medium">Volunteers</p>
+              <p className="text-navy font-bold text-sm">1,200+</p>
+              <p className="text-muted text-[10px] font-medium">Volunteers</p>
             </div>
           </motion.div>
 
@@ -155,29 +155,29 @@ export default function Hero() {
         animate="visible"
         className="relative z-20 max-w-[850px]"
       >
-        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-blue/10 border border-blue/30 text-blue-400 text-[0.8rem] font-bold tracking-[0.08em] uppercase px-5 py-2 rounded-full mb-8 backdrop-blur-sm">
-          <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-blue/10 border border-blue/20 text-blue text-[0.8rem] font-bold tracking-[0.08em] uppercase px-5 py-2 rounded-full mb-8 backdrop-blur-sm">
+          <span className="w-2 h-2 bg-blue rounded-full animate-pulse"></span>
           NGO &middot; Goa, India &middot; Supporting Local Change
         </motion.div>
 
         <motion.h1 
           variants={itemVariants} 
-          className="font-plus-jakarta text-[clamp(3.5rem,7vw,6.5rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-white mb-2"
+          className="font-plus-jakarta text-[clamp(3.5rem,7vw,6.5rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-navy mb-2"
         >
           Ideas that<br/>
           <span className="text-blue">create real</span><br/>
           <span className="text-accent">impact.</span>
         </motion.h1>
 
-        <motion.p variants={itemVariants} className="mt-10 text-[1.15rem] text-white/70 max-w-[580px] leading-[1.7] font-medium tracking-tight">
+        <motion.p variants={itemVariants} className="mt-10 text-[1.15rem] text-muted max-w-[580px] leading-[1.7] font-medium tracking-tight">
           AAI &mdash; All About Innovation &mdash; backs passionate entrepreneurs, women leaders, and bold startups using modern technology to solve real community challenges across Goa.
         </motion.p>
 
         <motion.div variants={itemVariants} className="mt-12 flex flex-wrap gap-4">
-          <Link href="#about" className="bg-blue text-white px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide shadow-[0_10px_30px_rgba(11,128,190,0.3)] hover:bg-white hover:text-navy hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(255,255,255,0.2)] transition-all duration-300 inline-flex items-center gap-2.5">
+          <Link href="#about" className="bg-blue text-white px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide shadow-[0_10px_30px_rgba(11,128,190,0.2)] hover:bg-navy hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,39,127,0.15)] transition-all duration-300 inline-flex items-center gap-2.5">
             <Compass size={20} /> Discover Our Mission
           </Link>
-          <Link href="#initiatives" className="border-2 border-white/20 text-white px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide hover:bg-white hover:text-navy hover:border-white transition-all duration-300 inline-flex items-center gap-2.5">
+          <Link href="#initiatives" className="border-2 border-border text-navy px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide hover:bg-navy hover:text-white hover:border-navy transition-all duration-300 inline-flex items-center gap-2.5">
             <ArrowDown size={20} /> Our Projects
           </Link>
         </motion.div>
