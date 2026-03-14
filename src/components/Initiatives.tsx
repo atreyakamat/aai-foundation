@@ -55,17 +55,17 @@ const initiatives = [
 
 export default function Initiatives() {
   return (
-    <section id="initiatives" className="py-24 px-[5%] bg-offwhite">
-      <div className="max-w-[1200px] mx-auto">
+    <section id="initiatives" className="py-24 px-[5%] bg-[#000b1d] relative overflow-hidden">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         <div className="mb-14">
-          <div className="flex items-center gap-2 text-blue text-[0.72rem] font-bold tracking-[0.14em] uppercase mb-3">
-            <div className="w-5.5 h-[2px] bg-blue rounded-full" />
+          <div className="flex items-center gap-2 text-blue-400 text-[0.72rem] font-bold tracking-[0.14em] uppercase mb-3">
+            <div className="w-5.5 h-[2px] bg-blue-400 rounded-full" />
             Social Initiatives
           </div>
-          <h2 className="font-inter text-[clamp(1.8rem,3.5vw,2.7rem)] font-extrabold leading-tight tracking-tight text-navy">
+          <h2 className="font-plus-jakarta text-[clamp(1.8rem,3.5vw,2.7rem)] font-extrabold leading-tight tracking-tight text-white">
             Projects that power<br/>community change
           </h2>
-          <p className="mt-4 text-muted max-w-[500px] leading-relaxed font-light">
+          <p className="mt-4 text-white/70 max-w-[500px] leading-relaxed font-medium">
             Real platforms and products solving real problems for communities, women entrepreneurs, and small businesses in Goa.
           </p>
         </div>
@@ -78,28 +78,28 @@ export default function Initiatives() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -5, boxShadow: "0 14px 44px rgba(0,39,127,0.1)" }}
-              className="group relative bg-white border border-border rounded-2xl p-10 transition-all overflow-hidden"
+              whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.2)" }}
+              className="group relative bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-10 transition-all duration-300 overflow-hidden"
             >
-              <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${init.color}`} />
+              <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${init.color} opacity-50`} />
               
-              <div className={`w-[50px] h-[50px] rounded-[14px] flex items-center justify-center text-lg mb-5 ${init.bgColor} border ${init.borderColor} ${init.iconColor}`}>
-                <init.icon size={22} />
+              <div className={`w-[52px] h-[52px] rounded-[16px] flex items-center justify-center text-lg mb-6 bg-white/5 border border-white/10 shadow-xl ${init.iconColor}`}>
+                <init.icon size={24} />
               </div>
               
-              <h3 className="font-inter font-bold text-navy text-[1.15rem] mb-3">{init.title}</h3>
-              <p className="text-muted text-[0.92rem] leading-relaxed font-light mb-6">{init.desc}</p>
+              <h3 className="font-plus-jakarta font-bold text-white text-[1.25rem] mb-4">{init.title}</h3>
+              <p className="text-white/60 text-[0.95rem] leading-relaxed font-normal mb-8">{init.desc}</p>
               
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2.5 mb-10">
                 {init.tags.map((tag, j) => (
-                  <span key={j} className={`${init.bgColor} border ${init.borderColor} ${init.iconColor} text-[0.72rem] px-3 py-1 rounded-full font-semibold tracking-wide`}>
+                  <span key={j} className={`bg-white/5 border border-white/10 ${init.iconColor} text-[0.7rem] px-3.5 py-1.5 rounded-full font-bold tracking-wider uppercase`}>
                     {tag}
                   </span>
                 ))}
               </div>
               
-              <Link href="#" className="inline-flex items-center gap-2 text-blue text-[0.85rem] font-bold group/link hover:gap-3 transition-all">
-                Learn more <ArrowRight size={16} />
+              <Link href="#" className="inline-flex items-center gap-2 text-blue-400 text-[0.9rem] font-bold group/link hover:gap-3 transition-all">
+                Learn more <ArrowRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
           ))}

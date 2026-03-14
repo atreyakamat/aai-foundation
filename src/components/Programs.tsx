@@ -51,17 +51,17 @@ const programs = [
 
 export default function Programs() {
   return (
-    <section id="programs" className="py-24 px-[5%] bg-offwhite">
-      <div className="max-w-[1200px] mx-auto">
+    <section id="programs" className="py-24 px-[5%] bg-[#000b1d] relative overflow-hidden">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         <div className="mb-14">
-          <div className="flex items-center gap-2 text-blue text-[0.72rem] font-bold tracking-[0.14em] uppercase mb-3">
-            <div className="w-5.5 h-[2px] bg-blue rounded-full" />
+          <div className="flex items-center gap-2 text-blue-400 text-[0.72rem] font-bold tracking-[0.14em] uppercase mb-3">
+            <div className="w-5.5 h-[2px] bg-blue-400 rounded-full" />
             What We Offer
           </div>
-          <h2 className="font-inter text-[clamp(1.8rem,3.5vw,2.7rem)] font-extrabold leading-tight tracking-tight text-navy">
+          <h2 className="font-plus-jakarta text-[clamp(1.8rem,3.5vw,2.7rem)] font-extrabold leading-tight tracking-tight text-white">
             Programs built to<br/>grow & survive
           </h2>
-          <p className="mt-4 text-muted max-w-[500px] leading-relaxed font-light">
+          <p className="mt-4 text-white/70 max-w-[500px] leading-relaxed font-medium">
             Tailored support across funding, mentorship, skilling and technology — for those ready to create lasting change.
           </p>
         </div>
@@ -74,21 +74,21 @@ export default function Programs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -5, borderColor: "rgba(11,128,190,0.3)", boxShadow: "0 12px 40px rgba(0,39,127,0.1)" }}
-              className="group relative bg-white border border-border rounded-2xl p-8 overflow-hidden transition-all"
+              whileHover={{ y: -5, borderColor: "rgba(11,128,190,0.4)", backgroundColor: "rgba(255,255,255,0.08)" }}
+              className="group relative bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 overflow-hidden transition-all duration-300"
             >
-              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-navy to-blue opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue/50 to-blue-400/50 opacity-0 group-hover:opacity-100 transition-opacity" />
               
-              <div className="w-12 h-12 rounded-xl bg-skylight border border-blue/20 flex items-center justify-center text-blue mb-5 group-hover:scale-110 transition-transform">
-                <prog.icon size={20} />
+              <div className="w-12 h-12 rounded-xl bg-blue/20 border border-blue/30 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                <prog.icon size={22} />
               </div>
               
-              <h3 className="font-inter font-bold text-navy text-[1.05rem] mb-2.5">{prog.title}</h3>
-              <p className="text-muted text-[0.88rem] leading-relaxed font-light mb-5">{prog.desc}</p>
+              <h3 className="font-plus-jakarta font-bold text-white text-[1.1rem] mb-3">{prog.title}</h3>
+              <p className="text-white/60 text-[0.9rem] leading-relaxed font-normal mb-6">{prog.desc}</p>
               
-              <div className="flex flex-wrap gap-1.5 mt-auto">
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {prog.tags.map((tag, j) => (
-                  <span key={j} className="bg-skylight border border-blue/20 text-blue text-[0.7rem] px-2.5 py-1 rounded-full font-semibold tracking-wide">
+                  <span key={j} className="bg-white/5 border border-white/10 text-blue-400 text-[0.68rem] px-3 py-1 rounded-full font-bold tracking-wider uppercase">
                     {tag}
                   </span>
                 ))}

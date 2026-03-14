@@ -21,7 +21,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <div id="stats" className="bg-navy py-12 px-[5%]">
+    <div id="stats" className="bg-[#000b1d] py-16 px-[5%] border-y border-white/5">
       <div className="max-w-[1140px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
         {stats.map((stat, i) => (
           <motion.div 
@@ -30,15 +30,15 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center group hover:-translate-y-1 transition-transform duration-300"
           >
-            <div className="text-white/30 mb-2">
-              <stat.icon size={18} />
+            <div className="text-blue-400/40 mb-3 group-hover:text-blue-400 transition-colors">
+              <stat.icon size={20} />
             </div>
-            <div className="font-inter text-4xl font-extrabold text-white leading-none">
+            <div className="font-plus-jakarta text-4xl font-extrabold text-white leading-none tracking-tight">
               {stat.num}
             </div>
-            <div className="text-[0.72rem] text-white/50 mt-1.5 uppercase tracking-widest">
+            <div className="text-[0.7rem] text-white/50 mt-2 uppercase tracking-[0.15em] font-bold">
               {stat.label}
             </div>
           </motion.div>

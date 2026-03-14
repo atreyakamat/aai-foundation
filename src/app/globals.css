@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-plus-jakarta: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 
   --color-navy: #00277f;
   --color-blue: #0b80be;
@@ -48,7 +48,7 @@
     letter-spacing: -0.011em;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-inter font-extrabold tracking-tight text-navy;
+    @apply font-plus-jakarta font-extrabold tracking-tight text-navy;
     line-height: 1.1;
   }
   p {
