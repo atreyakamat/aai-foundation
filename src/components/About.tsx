@@ -1,0 +1,98 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { UserRound, Lightbulb, Rocket, Store } from "lucide-react";
+
+export default function About() {
+  const backItems = [
+    { icon: UserRound, text: "Women entrepreneurs building a better, more equitable community" },
+    { icon: Lightbulb, text: "Individual entrepreneurs creating positive local impact" },
+    { icon: Rocket, text: "Startups creating jobs and opportunities in the community" },
+    { icon: Store, text: "Small businesses building sustainable local livelihoods" },
+  ];
+
+  return (
+    <section id="about" className="py-24 px-[5%] bg-white">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          
+          {/* Visual Orbit Animation */}
+          <div className="hidden lg:flex justify-center relative h-[360px]">
+            <div className="relative w-[360px] h-[360px] flex items-center justify-center">
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full border-[1.5px] border-dashed border-blue/20"
+              />
+              <div className="absolute inset-[40px] rounded-full border-[1.5px] border-blue/10" />
+              <div className="absolute inset-[65px] rounded-full bg-gradient-to-br from-skylight to-[#f0f7fd] border border-border shadow-inner" />
+              
+              {/* Orbiting Dots */}
+              {[
+                { color: "bg-blue", delay: 0, shadow: "shadow-[0_0_0_3px_rgba(11,128,190,0.18)]" },
+                { color: "bg-navy", delay: -2.3, shadow: "shadow-[0_0_0_3px_rgba(0,39,127,0.18)]" },
+                { color: "bg-accent", delay: -4.6, shadow: "shadow-[0_0_0_3px_rgba(224,123,0,0.18)]" },
+              ].map((dot, i) => (
+                <motion.div
+                  key={i}
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "linear", delay: dot.delay }}
+                  className="absolute w-full h-full"
+                >
+                  <div className={`absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full ${dot.color} ${dot.shadow}`} />
+                </motion.div>
+              ))}
+
+              <div className="relative z-10 w-40 h-40 bg-white rounded-full shadow-[0_8px_40px_rgba(0,39,127,0.12)] flex items-center justify-center p-6">
+                <Image src="/logo.svg" alt="AAI Logo" width={120} height={120} />
+              </div>
+            </div>
+          </div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col"
+          >
+            <div className="flex items-center gap-2 text-blue text-[0.72rem] font-bold tracking-[0.14em] uppercase mb-3">
+              <div className="w-5.5 h-[2px] bg-blue rounded-full" />
+              Who We Are
+            </div>
+            <h2 className="font-inter text-[clamp(1.8rem,3.5vw,2.7rem)] font-extrabold leading-tight tracking-tight text-navy">
+              Supporting ideas that bring real change
+            </h2>
+            <div className="mt-5 space-y-4">
+              <p className="text-muted leading-relaxed font-light">
+                AAI provides support, coaching & funding to startups and small businesses pursuing social, economic, and environmental outcomes — with business models that create positive impact in the local Goan community.
+              </p>
+              <p className="text-muted leading-relaxed font-light">
+                We back passionate entrepreneurs who leverage modern technology startup methodologies to address key challenges facing our community today.
+              </p>
+            </div>
+            
+            <div className="mt-7">
+              <div className="font-inter font-bold text-navy text-base mb-4">We back:</div>
+              <div className="space-y-3">
+                {backItems.map((item, i) => (
+                  <motion.div 
+                    key={i}
+                    whileHover={{ scale: 1.02, borderColor: "var(--blue)" }}
+                    className="flex items-start gap-3.5 p-3.5 bg-offwhite border border-border rounded-xl transition-all"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-skylight border border-blue/20 flex items-center justify-center shrink-0 text-blue">
+                      <item.icon size={16} />
+                    </div>
+                    <p className="text-text text-[0.9rem] leading-snug">{item.text}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}

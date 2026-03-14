@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All About Innovations (AAI) | NGO for Innovation & Community Development, Goa</title>
+  <meta name="description" content="All About Innovations (AAI) is a registered non-profit society in Goa, India, dedicated to promoting innovation, social work, community development, and service to society. Registered No. 149/Goa/2022." />
+  <meta name="keywords" content="All About Innovations, AAI, NGO Goa, non-profit Goa, innovation society Goa, community development Goa, social work Goa, registered society Goa" />
+  <meta property="og:title" content="All About Innovations (AAI) | NGO Goa" />
+  <meta property="og:description" content="A registered non-profit society promoting innovation, social work, and community development in Goa, India." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0d1117;
+      --paper: #f5f0e8;
+      --accent: #e05c2a;
+      --accent2: #2a6ee0;
+      --muted: #7a7060;
+      --card-bg: #ffffff;
+      --border: #e0d8c8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--ink);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6vw;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 1.15rem;
+      color: var(--paper); letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: #aaa; text-decoration: none;
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em;
+      text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--paper); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 92vh;
+      display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+      padding: 5rem 6vw 4rem;
+      gap: 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(224,92,42,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--ink); color: var(--paper);
+      padding: 0.35rem 0.9rem; border-radius: 2rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    .hero-badge::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent); display: block;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 800; line-height: 1.05;
+      letter-spacing: -0.03em; margin-bottom: 1.5rem;
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+    .hero-desc {
+      font-size: 1.1rem; color: var(--muted);
+      max-width: 480px; margin-bottom: 2.5rem;
+    }
+    .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: 0.85rem 2rem; border-radius: 0.4rem;
+      font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #c94a1f; transform: translateY(-2px); }
+    .btn-outline {
+      border: 2px solid var(--ink); color: var(--ink);
+      padding: 0.8rem 2rem; border-radius: 0.4rem;
+      font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: var(--ink); color: var(--paper); }
+
+    .hero-visual {
+      display: flex; flex-direction: column; gap: 1.2rem;
+      position: relative;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem; padding: 1.5rem 2rem;
+      display: flex; align-items: center; gap: 1.2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.10); }
+    .stat-icon {
+      width: 52px; height: 52px; border-radius: 0.75rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; flex-shrink: 0;
+    }
+    .stat-icon.orange { background: rgba(224,92,42,0.12); }
+    .stat-icon.blue   { background: rgba(42,110,224,0.12); }
+    .stat-icon.green  { background: rgba(42,180,100,0.12); }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.6rem; font-weight: 800; line-height: 1;
+    }
+    .stat-label { font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 5rem 6vw; }
+    .section-tag {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 0.75rem; display: block;
+    }
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      font-weight: 800; letter-spacing: -0.025em;
+      line-height: 1.1; margin-bottom: 1rem;
+    }
+    .section-intro { color: var(--muted); max-width: 560px; font-size: 1.05rem; margin-bottom: 3rem; }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+    }
+    .about-text p { color: #444; margin-bottom: 1rem; }
+    .reg-badge {
+      display: inline-block;
+      background: var(--ink); color: var(--paper);
+      font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700;
+      padding: 0.6rem 1.2rem; border-radius: 0.4rem;
+      margin-top: 1rem; letter-spacing: 0.04em;
+    }
+    .about-details { display: flex; flex-direction: column; gap: 1rem; }
+    .detail-item {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 1.25rem 1.5rem;
+    }
+    .detail-item strong { display: block; font-weight: 600; margin-bottom: 0.2rem; }
+    .detail-item span { color: var(--muted); font-size: 0.9rem; }
+
+    /* ── OBJECTIVES ── */
+    .objectives-section { background: var(--ink); color: var(--paper); }
+    .objectives-section .section-tag { color: var(--accent); }
+    .objectives-section h2 { color: var(--paper); }
+    .objectives-section .section-intro { color: #aaa; }
+    .objectives-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .obj-card {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 1rem; padding: 1.8rem;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+      cursor: default;
+    }
+    .obj-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+    .obj-num {
+      font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+      color: var(--accent); opacity: 0.7; line-height: 1; margin-bottom: 0.75rem;
+    }
+    .obj-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .obj-card p { color: #aaa; font-size: 0.88rem; line-height: 1.6; }
+
+    /* ── GOVERNANCE ── */
+    .team-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .team-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 1rem; padding: 1.8rem 1.5rem; text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+    .avatar {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem;
+      color: #fff; margin: 0 auto 1rem;
+    }
+    .team-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .role-badge {
+      display: inline-block;
+      background: rgba(224,92,42,0.1); color: var(--accent);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 2rem;
+    }
+    .team-card .address { color: var(--muted); font-size: 0.78rem; margin-top: 0.6rem; }
+
+    /* ── MEMBERSHIP ── */
+    .membership-section { background: #f0ebe0; }
+    .membership-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .fee-box {
+      background: var(--card-bg); border: 2px solid var(--accent);
+      border-radius: 1.25rem; padding: 2.5rem; text-align: center;
+    }
+    .fee-amount {
+      font-family: 'Syne', sans-serif; font-size: 3.5rem; font-weight: 800;
+      color: var(--accent); line-height: 1;
+    }
+    .fee-box p { color: var(--muted); margin-top: 0.5rem; }
+    .fee-note { font-size: 0.85rem; margin-top: 1.5rem; color: var(--muted); }
+    .membership-steps { display: flex; flex-direction: column; gap: 1rem; }
+    .step {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 1.25rem;
+    }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .step-text strong { display: block; margin-bottom: 0.2rem; font-weight: 600; }
+    .step-text span { color: var(--muted); font-size: 0.87rem; }
+
+    /* ── STRUCTURE ── */
+    .structure-section { background: var(--paper); }
+    .structure-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .structure-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 1.25rem; padding: 2.5rem;
+    }
+    .structure-card h3 {
+      font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700;
+      margin-bottom: 1rem; padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .structure-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .structure-card li {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.92rem; color: #444;
+    }
+    .structure-card li::before {
+      content: '→'; color: var(--accent); font-weight: 700; flex-shrink: 0;
+    }
+
+    /* ── LEGAL HIGHLIGHT ── */
+    .legal-strip {
+      background: var(--accent2); color: #fff;
+      padding: 3rem 6vw; text-align: center;
+    }
+    .legal-strip h2 { color: #fff; margin-bottom: 1rem; }
+    .legal-strip p { color: rgba(255,255,255,0.8); max-width: 640px; margin: 0 auto; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink); color: #888;
+      padding: 3rem 6vw; display: grid;
+      grid-template-columns: 2fr 1fr 1fr; gap: 3rem;
+    }
+    .footer-brand .nav-logo { font-size: 1.3rem; margin-bottom: 0.75rem; display: block; }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.6; max-width: 280px; }
+    footer h4 {
+      font-family: 'Syne', sans-serif; font-weight: 700; color: var(--paper);
+      font-size: 0.88rem; letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    footer a { color: #888; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    footer a:hover { color: var(--paper); }
+    .footer-bottom {
+      background: #080b10; color: #555; padding: 1.25rem 6vw;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.82rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 3rem; }
+      .about-grid, .membership-grid, .structure-cards { grid-template-columns: 1fr; }
+      footer { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      footer { grid-template-columns: 1fr; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-badge { animation: fadeUp 0.5s ease both; }
+    h1 { animation: fadeUp 0.55s 0.1s ease both; }
+    .hero-desc { animation: fadeUp 0.55s 0.18s ease both; }
+    .hero-cta-group { animation: fadeUp 0.55s 0.26s ease both; }
+    .hero-visual { animation: fadeUp 0.55s 0.3s ease both; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav aria-label="Main navigation">
+  <span class="nav-logo">All About <span>Innovations</span></span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#governance">Governance</a></li>
+    <li><a href="#membership">Membership</a></li>
+    <li><a href="#structure">Structure</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero" role="banner">
+  <div class="hero-content">
+    <div class="hero-badge">Registered NGO · Goa, India</div>
+    <h1>Driving <em>Innovation</em> &amp; Community Growth in Goa</h1>
+    <p class="hero-desc">
+      All About Innovations (AAI) is a registered non-profit society in Goa, committed to promoting innovation, social welfare, and community development across the region.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#membership" class="btn-primary">Become a Member</a>
+      <a href="#about" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="stat-card">
+      <div class="stat-icon orange">🏛️</div>
+      <div>
+        <div class="stat-num">2022</div>
+        <div class="stat-label">Year of Establishment</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon blue">📋</div>
+      <div>
+        <div class="stat-num">149/Goa/2022</div>
+        <div class="stat-label">Official Registration Number</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green">🤝</div>
+      <div>
+        <div class="stat-num">Non-Profit</div>
+        <div class="stat-label">Registered under Societies Act 1860</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── ABOUT ── -->
+<section id="about" aria-labelledby="about-heading">
+  <span class="section-tag">Who We Are</span>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 id="about-heading">About All About Innovations (AAI)</h2>
+      <p>
+        <strong>All About Innovations (AAI)</strong> is a registered non-profit society based in North Goa, India. Officially registered on <strong>21 December 2022</strong> under the Societies Registration Act, 1860 (Central Act 21 of 1860) by the Government of Goa, AAI was founded to be a catalyst for positive change — empowering communities, recognising excellence, and making innovation accessible to all.
+      </p>
+      <p>
+        Our society was established by a founding group of passionate individuals committed to social service and innovation. We operate as a fully transparent, non-profit entity — all income and property is used solely to advance our mission, never distributed among members for personal gain.
+      </p>
+      <p>
+        AAI operates primarily across the state of Goa, focusing on innovation promotion, social work, community development, and allied public welfare activities.
+      </p>
+      <span class="reg-badge">Reg. No. 149/Goa/2022</span>
+    </div>
+    <div class="about-details">
+      <div class="detail-item">
+        <strong>Registered Name</strong>
+        <span>All About Innovation (AAI)</span>
+      </div>
+      <div class="detail-item">
+        <strong>Registered Address</strong>
+        <span>C/o Mohit Sangelkar, H.No 872, Porta Vaddo, Siolim Rai, Bardez, Siolim, North Goa – 403517</span>
+      </div>
+      <div class="detail-item">
+        <strong>Registration Authority</strong>
+        <span>Office of the District Registrar (North) &amp; Inspector General of Societies, Panaji, Goa</span>
+      </div>
+      <div class="detail-item">
+        <strong>Governing Law</strong>
+        <span>The Societies Registration Act, 1860 (Central Act 21 of 1860)</span>
+      </div>
+      <div class="detail-item">
+        <strong>Financial Year</strong>
+        <span>1st April – 31st March</span>
+      </div>
+      <div class="detail-item">
+        <strong>Area of Operation</strong>
+        <span>State of Goa, India</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OBJECTIVES ── -->
+<section id="objectives" class="objectives-section" aria-labelledby="objectives-heading">
+  <span class="section-tag">What We Do</span>
+  <h2 id="objectives-heading">Our Aims &amp; Objectives</h2>
+  <p class="section-intro">
+    AAI was established with a clear, multi-faceted mission. Here are the core objectives that guide everything we do.
+  </p>
+  <div class="objectives-grid">
+    <article class="obj-card">
+      <div class="obj-num">01</div>
+      <h3>Promote Innovation</h3>
+      <p>Foster a culture of innovation, creativity, and forward-thinking solutions across communities in Goa and beyond.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">02</div>
+      <h3>Community Development</h3>
+      <p>Drive social work, community development programmes, and service-oriented activities that uplift society.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">03</div>
+      <h3>Member &amp; Community Assistance</h3>
+      <p>Provide practical assistance and resources to members and the broader community whenever needed.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">04</div>
+      <h3>Awards &amp; Recognition</h3>
+      <p>Identify and honour outstanding members and citizens whose contributions make Goa a better place.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">05</div>
+      <h3>Government Schemes Access</h3>
+      <p>Help members access and benefit from government financial schemes, grants, and welfare programmes.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">06</div>
+      <h3>Publications &amp; Outreach</h3>
+      <p>Publish books, periodicals, brochures, and maintain a digital presence to spread awareness and knowledge.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">07</div>
+      <h3>Resource Mobilisation</h3>
+      <p>Procure donations, contributions, grants, and mobilise resources in a transparent, lawful manner.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">08</div>
+      <h3>Collaborate &amp; Partner</h3>
+      <p>Associate and cooperate with like-minded organisations sharing similar objectives and values.</p>
+    </article>
+    <article class="obj-card">
+      <div class="obj-num">09</div>
+      <h3>Fund Management</h3>
+      <p>Collect, hold, manage, and invest funds responsibly in accordance with all applicable laws.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ── GOVERNANCE ── -->
+<section id="governance" aria-labelledby="governance-heading">
+  <span class="section-tag">Our Team</span>
+  <h2 id="governance-heading">Governing Body</h2>
+  <p class="section-intro">
+    AAI is managed by a dedicated Managing Committee of five governing members, elected by the General Body for three-year terms.
+  </p>
+  <div class="team-grid">
+    <article class="team-card">
+      <div class="avatar">RS</div>
+      <h3>Resha Rajesh Sangelkar</h3>
+      <span class="role-badge">President</span>
+      <p class="address">H.No 872/1, Porta Vaddo, Siolim, North Goa</p>
+    </article>
+    <article class="team-card">
+      <div class="avatar">MS</div>
+      <h3>Mrinal Ramnath Sangelkar</h3>
+      <span class="role-badge">Secretary</span>
+      <p class="address">H.No 872, Porta Vaddo, Siolim, North Goa</p>
+    </article>
+    <article class="team-card">
+      <div class="avatar">SN</div>
+      <h3>Shanisha Naik</h3>
+      <span class="role-badge">Treasurer</span>
+      <p class="address">Mauli Building, Vitthalwadi, Kudal, Dist. Sindhudurg</p>
+    </article>
+    <article class="team-card">
+      <div class="avatar">RS</div>
+      <h3>Ramakant Shankar Samant</h3>
+      <span class="role-badge">Member</span>
+      <p class="address">140A, Bramhanwadi, Bambarde, Tal. Kalsuli, Dist. Sindhudurg</p>
+    </article>
+    <article class="team-card">
+      <div class="avatar">MR</div>
+      <h3>Mohit Ramnath Sangelkar</h3>
+      <span class="role-badge">Member</span>
+      <p class="address">H.No 872, Porta Vaddo, Siolim, North Goa</p>
+    </article>
+  </div>
+</section>
+
+<!-- ── MEMBERSHIP ── -->
+<section id="membership" class="membership-section" aria-labelledby="membership-heading">
+  <span class="section-tag">Join Us</span>
+  <h2 id="membership-heading">Become a Member of AAI</h2>
+  <p class="section-intro">
+    Anyone who believes in the power of innovation and community service can apply to join AAI. Here's how our membership works.
+  </p>
+  <div class="membership-grid">
+    <div>
+      <div class="fee-box">
+        <div class="fee-amount">₹1,000</div>
+        <p>Annual Membership Fee</p>
+        <p class="fee-note">Membership is valid for one year. Renewal is required annually to remain an active member of the Association.</p>
+        <a href="#contact" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">Apply for Membership</a>
+      </div>
+    </div>
+    <div class="membership-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Submit a Written Application</strong>
+          <span>Apply in writing to the Managing Committee with the required documents and the membership fee.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Eligibility Verification</strong>
+          <span>The Secretary reviews your application for eligibility before presenting it to the Managing Committee.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Committee Decision</strong>
+          <span>The Managing Committee considers and decides on your application at its next meeting.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <strong>Welcome to AAI!</strong>
+          <span>Upon approval, you are registered in the Member Register and enjoy full membership rights.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ORGANISATIONAL STRUCTURE ── -->
+<section id="structure" class="structure-section" aria-labelledby="structure-heading">
+  <span class="section-tag">How We Operate</span>
+  <h2 id="structure-heading">Organisational Structure</h2>
+  <p class="section-intro">
+    AAI operates through a two-tier governance model — a General Body representing all members, and an Executive Committee handling day-to-day management.
+  </p>
+  <div class="structure-cards">
+    <div class="structure-card">
+      <h3>🏛️ General Body</h3>
+      <ul>
+        <li>All paid-up members with no outstanding dues</li>
+        <li>Elects President, Secretary, Treasurer &amp; two Executive Members</li>
+        <li>Annual General Body Meeting held every October</li>
+        <li>21 days' notice required for Annual meetings</li>
+        <li>Quorum: 50% of total membership</li>
+        <li>Approves annual report, accounts, and budget</li>
+        <li>Has power to amend the Constitution</li>
+      </ul>
+    </div>
+    <div class="structure-card">
+      <h3>⚙️ Executive Committee</h3>
+      <ul>
+        <li>Consists of President, Secretary, Treasurer &amp; 2 Members</li>
+        <li>3-year term elected by secret ballot</li>
+        <li>Meets at least 4 times per year</li>
+        <li>Quorum: 4 members</li>
+        <li>Manages daily operations and finances</li>
+        <li>Bank accounts operated by any two of: President, Secretary, Treasurer</li>
+        <li>Can take emergency decisions subject to General Body ratification</li>
+      </ul>
+    </div>
+    <div class="structure-card">
+      <h3>💰 Funds &amp; Finance</h3>
+      <ul>
+        <li>Member registration fees</li>
+        <li>Donations and contributions</li>
+        <li>Government grants and aid</li>
+        <li>Income from investments</li>
+        <li>Fees and collections from events</li>
+        <li>Sale of assets</li>
+        <li>Annual accounts audited by an appointed Auditor</li>
+      </ul>
+    </div>
+    <div class="structure-card">
+      <h3>⚖️ Dissolution &amp; Dispute Resolution</h3>
+      <ul>
+        <li>Dissolution requires 3/5th member vote in a General Body</li>
+        <li>Assets transferred to a similar registered society — never distributed personally</li>
+        <li>Disputes first resolved through mutual discussion</li>
+        <li>Unresolved disputes escalated to President-appointed mediator</li>
+        <li>Final recourse: arbitration by Managing Committee appointee</li>
+        <li>Arbitrator's decision is final and binding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEGAL STRIP ── -->
+<div class="legal-strip" role="complementary" aria-label="Legal registration information">
+  <h2>Officially Registered &amp; Legally Compliant</h2>
+  <p>
+    AAI is duly registered under the Societies Registration Act, 1860 (Central Act 21 of 1860) with Registration No. 149/Goa/2022, issued by the Inspector General of Societies (North), Panaji, Goa on 21 December 2022. Our constitution is compliant with the Income Tax Act 1961.
+  </p>
+</div>
+
+<!-- ── CONTACT ── -->
+<section id="contact" aria-labelledby="contact-heading">
+  <span class="section-tag">Get In Touch</span>
+  <h2 id="contact-heading">Contact AAI</h2>
+  <p class="section-intro">Interested in membership, partnerships, or learning more about our work? Reach out to us.</p>
+  <div class="about-details" style="max-width:500px;">
+    <div class="detail-item">
+      <strong>Registered Office Address</strong>
+      <span>C/o Mohit Sangelkar, H.No 872, Porta Vaddo, Siolim Rai, Bardez, Siolim, North Goa, Goa – 403517</span>
+    </div>
+    <div class="detail-item">
+      <strong>President – Contact</strong>
+      <span>Resha Rajesh Sangelkar &nbsp;|&nbsp; 📞 8007762522</span>
+    </div>
+    <div class="detail-item">
+      <strong>Registration Number</strong>
+      <span>149/Goa/2022 (Societies Registration Act, 1860)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer aria-label="Site footer">
+  <div class="footer-brand">
+    <span class="nav-logo">All About <span>Innovations</span></span>
+    <p>A registered non-profit society in Goa, promoting innovation, social welfare, and community development since 2022.</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="#about">About AAI</a></li>
+      <li><a href="#objectives">Our Objectives</a></li>
+      <li><a href="#governance">Governing Body</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#structure">Structure</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="#about">Registration Details</a></li>
+      <li><a href="#structure">Dissolution Policy</a></li>
+      <li><a href="#structure">Dispute Resolution</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2024 All About Innovations (AAI). Reg. No. 149/Goa/2022.</span>
+  <span>Registered under Societies Registration Act, 1860 · Goa, India</span>
+</div>
+
+</body>
+</html>
