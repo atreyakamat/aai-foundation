@@ -20,9 +20,8 @@ export default function Navbar() {
         <li><Link href="/#initiatives" className="text-muted text-sm font-medium hover:text-navy transition-colors">Initiatives</Link></li>
         <li><Link href="/#governance" className="text-muted text-sm font-medium hover:text-navy transition-colors">Team</Link></li>
       </ul>
-      <Link href="/#cta" className="bg-blue text-white px-6 py-2.5 font-plus-jakarta font-bold text-[0.85rem] rounded-full hover:bg-navy transition-all active:scale-95 tracking-wide">
-        Get Involved &rarr;
-      </Link>
-    </nav>
+      <a href="mailto:aaingo@sparkplustech.com" className="hidden md:block text-muted hover:text-blue transition-colors font-bold text-[0.85rem] tracking-wide">
+        aaingo@sparkplustech.com
+      </a>    </nav>
   );
 }

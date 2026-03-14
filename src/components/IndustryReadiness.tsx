@@ -104,12 +104,12 @@ export default function IndustryReadiness() {
                   <Users size={32} />
                 </div>
                 <div className="text-right">
-                  <p className="text-blue text-3xl font-black">100+</p>
+                  <p className="text-blue text-3xl font-black">200+</p>
                   <p className="text-muted text-xs font-bold uppercase tracking-wider">Trained Professionals</p>
                 </div>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-6 pb-4">
                 <div className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-border/50">
                   <CheckCircle2 className="text-green-600 shrink-0" size={20} />
                   <p className="text-navy/80 text-sm font-medium">Industry-recognized certifications</p>
@@ -123,14 +123,6 @@ export default function IndustryReadiness() {
                   <p className="text-navy/80 text-sm font-medium">Soft skills & entrepreneurship</p>
                 </div>
               </div>
-
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full mt-10 bg-blue text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all hover:bg-navy"
-              >
-                Apply for Next Cohort <ArrowRight size={18} />
-              </motion.button>
             </div>
 
             {/* Decorative element */}

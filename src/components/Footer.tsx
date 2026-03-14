@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-muted text-[0.85rem] mt-4 flex items-center gap-2 font-medium">
-            <MapPin size={16} className="text-blue/60" /> Goa, India &middot; Supporting Real Change
+            <MapPin size={16} className="text-blue/60" /> Goa, India &middot; Supporting Positive Change
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export default function Footer() {
         </ul>
 
         <div className="text-muted/60 text-[0.8rem] leading-relaxed md:text-right font-medium">
-          &copy; {new Date().getFullYear()} AAI &ndash; All About Innovation Foundation<br/>
+          &copy; {new Date().getFullYear()} AAI (All About Innovation) Foundation<br/>
           <span className="flex items-center justify-start md:justify-end gap-1.5 mt-1.5">
             <Heart size={12} className="text-blue" /> Empowering communities through technology.
           </span>

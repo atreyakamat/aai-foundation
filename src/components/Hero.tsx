@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 import { motion, Variants } from "framer-motion";
-import { Compass, ArrowDown, Rocket, TrendingUp, Users, CheckCircle2 } from "lucide-react";
-import Link from "next/link";
+import { Compass, ArrowDown } from "lucide-react";
+import Image from "next/image";
 import { Particles } from "./ui/particles";
 
 export default function Hero() {
@@ -56,94 +56,22 @@ export default function Hero() {
         className="hero-shape w-[640px] h-[640px] -top-[200px] -right-[140px] bg-[radial-gradient(circle,rgba(11,128,190,0.1),transparent_70%)]" 
       />
       
-      {/* Professional Success Dashboard (Right Side) */}
+      {/* Visual Component (Right Side) - Logo based */}
       <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[45%] h-[600px] hidden lg:flex items-center justify-center z-10 pointer-events-none">
         <motion.div 
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative w-full max-w-[500px]"
+          className="relative w-full max-w-[450px]"
         >
-          {/* Main Success Card - Glassmorphism style */}
           <motion.div 
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-white rounded-[32px] shadow-[0_24px_50px_rgba(0,39,127,0.08)] border border-border p-8 relative overflow-hidden"
+            className="flex items-center justify-center"
           >
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue/10 rounded-xl flex items-center justify-center border border-blue/20">
-                  <TrendingUp className="text-blue" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-navy font-bold text-lg leading-tight">Innovation Index</h4>
-                  <p className="text-muted text-xs font-medium">Monthly Impact Report</p>
-                </div>
-              </div>
-              <div className="bg-green-500/10 text-green-600 border border-green-500/20 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                +12.5% <TrendingUp size={12} />
-              </div>
-            </div>
-
-            {/* Simple Visual Chart */}
-            <div className="h-32 flex items-end gap-2 mb-8 px-2">
-              {[40, 70, 55, 90, 65, 80, 100].map((h, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ height: 0 }}
-                  animate={{ height: `${h}%` }}
-                  transition={{ delay: 0.5 + (i * 0.1), duration: 1 }}
-                  className="flex-1 bg-gradient-to-t from-blue/5 to-blue/40 rounded-t-md relative group border-t border-x border-border/30"
-                >
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-navy text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                    {h}%
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-offwhite rounded-2xl p-4 border border-border/50">
-                <p className="text-muted text-[10px] font-bold uppercase tracking-wider mb-1">Active Projects</p>
-                <p className="text-navy text-xl font-black">240+</p>
-              </div>
-              <div className="bg-offwhite rounded-2xl p-4 border border-border/50">
-                <p className="text-muted text-[10px] font-bold uppercase tracking-wider mb-1">Funding Raised</p>
-                <p className="text-navy text-xl font-black">₹8.4M</p>
-              </div>
-            </div>
-
-            {/* Decorative Overlay */}
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue/5 to-transparent pointer-events-none" />
-          </motion.div>
-
-          {/* Floating Mini Card 1: Users */}
-          <motion.div
-            animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-12 -left-12 bg-white rounded-2xl shadow-xl border border-border p-4 flex items-center gap-3 z-20"
-          >
-            <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center border border-accent/20">
-              <Users className="text-accent" size={20} />
-            </div>
-            <div>
-              <p className="text-navy font-bold text-sm">1,200+</p>
-              <p className="text-muted text-[10px] font-medium">Volunteers</p>
-            </div>
-          </motion.div>
-
-          {/* Floating Mini Card 2: Success */}
-          <motion.div
-            animate={{ y: [0, -25, 0], x: [0, -15, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-8 -right-8 bg-blue rounded-2xl shadow-xl p-5 flex items-center gap-3 z-20 text-white border border-white/20"
-          >
-            <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-              <CheckCircle2 className="text-white" size={20} />
-            </div>
-            <div>
-              <p className="font-bold text-sm">Verified</p>
-              <p className="text-white/70 text-[10px] font-medium">Social Impact</p>
+            <div className="relative">
+              <div className="absolute inset-0 bg-blue/10 rounded-full blur-3xl scale-125"></div>
+              <Image src="/logo.svg" alt="AAI Logo" width={300} height={300} className="relative z-10 opacity-80" />
             </div>
           </motion.div>
         </motion.div>
@@ -157,7 +85,7 @@ export default function Hero() {
       >
         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-blue/10 border border-blue/20 text-blue text-[0.8rem] font-bold tracking-[0.08em] uppercase px-5 py-2 rounded-full mb-8 backdrop-blur-sm">
           <span className="w-2 h-2 bg-blue rounded-full animate-pulse"></span>
-          NGO &middot; Goa, India &middot; Supporting Local Change
+          NGO &middot; Goa, India &middot; Supporting Positive Change
         </motion.div>
 
         <motion.h1 
@@ -170,17 +98,8 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p variants={itemVariants} className="mt-10 text-[1.15rem] text-muted max-w-[580px] leading-[1.7] font-medium tracking-tight">
-          AAI &mdash; All About Innovation &mdash; backs passionate entrepreneurs, women leaders, and bold startups using modern technology to solve real community challenges across Goa.
+          AAI (All About Innovation) backs passionate entrepreneurs, women leaders, and bold startups using modern technology to solve real community challenges across Goa.
         </motion.p>
-
-        <motion.div variants={itemVariants} className="mt-12 flex flex-wrap gap-4">
-          <Link href="#about" className="bg-blue text-white px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide shadow-[0_10px_30px_rgba(11,128,190,0.2)] hover:bg-navy hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,39,127,0.15)] transition-all duration-300 inline-flex items-center gap-2.5">
-            <Compass size={20} /> Discover Our Mission
-          </Link>
-          <Link href="#initiatives" className="border-2 border-border text-navy px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide hover:bg-navy hover:text-white hover:border-navy transition-all duration-300 inline-flex items-center gap-2.5">
-            <ArrowDown size={20} /> Our Projects
-          </Link>
-        </motion.div>
       </motion.div>
     </section>
   );

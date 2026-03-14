@@ -14,7 +14,7 @@ const stats = [
   { icon: FolderKanban, num: "10+", label: "Social Projects" },
   { icon: Venus, num: "50+", label: "Women Trained" },
   { icon: Sprout, num: "2+", label: "Startups Funded" },
-  { icon: GraduationCap, num: "100+", label: "Students Trained" },
+  { icon: GraduationCap, num: "200+", label: "Professionals Trained" },
   { icon: HandHeart, num: "50+", label: "Volunteers" },
   { icon: Users, num: "100+", label: "People Helped" },
 ];

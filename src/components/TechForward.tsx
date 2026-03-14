@@ -69,7 +69,7 @@ export default function TechForward() {
               </TextCursorProximity>
             </h2>
             <p className="text-muted max-w-[500px] leading-relaxed font-normal mb-10 text-[1.1rem]">
-              Connecting schools with experienced speakers, professionals, and mentors who deliver impactful sessions — completely or partially sponsored by our partners and donors.
+              Connecting schools with experienced speakers, professionals, and mentors who deliver impactful sessions completely or partially sponsored by our partners and donors.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

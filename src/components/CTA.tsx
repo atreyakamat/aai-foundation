@@ -2,10 +2,8 @@
 
 import { motion } from "framer-motion";
 import { 
-  ArrowRight, 
   Mail 
 } from "lucide-react";
-import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -27,18 +25,19 @@ export default function CTA() {
             <Mail size={32} className="text-blue" />
           </div>
           <h2 className="font-plus-jakarta text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-navy leading-[1.1] mb-6">
-            Ready to bring your<br/>idea to life?
+            Get in Touch
           </h2>
           <p className="text-muted text-[1.1rem] leading-relaxed font-medium max-w-[580px] mx-auto mb-12">
-            Whether you're an entrepreneur, a student, a volunteer, or a donor — there's a place for you in the AAI community. Join us in building a brighter future for Goa.
+            Whether you're an entrepreneur, a student, a volunteer, or a donor, there's a place for you in the AAI community. Join us in building a brighter future for Goa.
           </p>
-          <div className="flex flex-wrap justify-center gap-5">
-            <Link href="mailto:hello@aai.org.in" className="bg-blue text-white px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide shadow-[0_10px_30px_rgba(11,128,190,0.2)] hover:bg-navy hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2.5">
-              <Mail size={20} /> Get in Touch
-            </Link>
-            <Link href="#programs" className="bg-white border-2 border-border text-navy px-10 py-4 rounded-full font-plus-jakarta font-bold text-[0.95rem] tracking-wide hover:bg-navy hover:text-white hover:border-navy transition-all duration-300 inline-flex items-center gap-2.5">
-              Explore Programs <ArrowRight size={20} />
-            </Link>
+          <div className="flex flex-col items-center gap-2">
+            <a 
+              href="mailto:aaingo@sparkplustech.com" 
+              className="text-blue font-plus-jakarta font-bold text-[1.2rem] hover:text-navy transition-colors flex items-center gap-3"
+            >
+              <Mail size={24} />
+              aaingo@sparkplustech.com
+            </a>
           </div>
         </div>
       </motion.div>

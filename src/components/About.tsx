@@ -7,9 +7,9 @@ import { UserRound, Lightbulb, Rocket, Store } from "lucide-react";
 export default function About() {
   const backItems = [
     { icon: UserRound, text: "Women entrepreneurs building a better, more equitable community" },
-    { icon: Lightbulb, text: "Individual entrepreneurs creating positive local impact" },
+    { icon: Lightbulb, text: "Individual entrepreneurs creating positive impact" },
     { icon: Rocket, text: "Startups creating jobs and opportunities in the community" },
-    { icon: Store, text: "Small businesses building sustainable local livelihoods" },
+    { icon: Store, text: "Small businesses building sustainable livelihoods" },
   ];
 
   return (
@@ -69,7 +69,7 @@ export default function About() {
             </h2>
             <div className="space-y-5">
               <p className="text-muted leading-relaxed font-medium text-[1.05rem]">
-                AAI provides support, coaching & funding to startups and small businesses pursuing social, economic, and environmental outcomes — with business models that create positive impact in the local Goan community.
+                AAI provides support, coaching & funding to startups and small businesses pursuing social, economic, and environmental outcomes with business models that create positive impact in the Goan community.
               </p>
               <p className="text-muted/80 leading-relaxed font-normal">
                 We back passionate entrepreneurs who leverage modern technology startup methodologies to address key challenges facing our community today.

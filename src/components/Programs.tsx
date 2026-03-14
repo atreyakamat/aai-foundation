@@ -38,13 +38,13 @@ const programs = [
   {
     icon: Handshake,
     title: "Community Volunteering",
-    desc: "Connecting volunteers with NGOs and causes across Goa — 60+ NGOs in the network and growing every month.",
+    desc: "Connecting volunteers with NGOs and causes across Goa, with 60+ NGOs in the network and growing every month.",
     tags: ["60+ NGOs", "Volunteer Network", "Social Impact"]
   },
   {
     icon: Network,
     title: "Innovation Ecosystem",
-    desc: "Building a connected ecosystem where ideas, resources, and people come together to solve local challenges through modern technology.",
+    desc: "Building a connected ecosystem where ideas, resources, and people come together to solve real challenges through modern technology.",
     tags: ["Ecosystem", "Collaboration", "Innovation Labs"]
   }
 ];
@@ -62,7 +62,7 @@ export default function Programs() {
             Programs built to<br/>grow & survive
           </h2>
           <p className="mt-4 text-muted max-w-[500px] leading-relaxed font-medium">
-            Tailored support across funding, mentorship, skilling and technology — for those ready to create lasting change.
+            Tailored support across funding, mentorship, skilling and technology for those ready to create lasting change.
           </p>
         </div>
 

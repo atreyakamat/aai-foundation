@@ -17,8 +17,13 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AAI – All About Innovation | NGO Supporting Ideas That Bring Change",
+  title: "AAI (All About Innovation) | NGO Supporting Ideas That Bring Change",
   description: "AAI backs passionate entrepreneurs, women leaders, and bold startups using modern technology to solve real community challenges across Goa.",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

@@ -5,15 +5,13 @@ import {
   Globe, 
   ShoppingBag, 
   Store, 
-  Users, 
-  ArrowRight 
+  Users
 } from "lucide-react";
-import Link from "next/link";
 
 const initiatives = [
   {
     title: "Digital Baila",
-    desc: "A social collaboration and networking platform digitally transforming Self-Help Groups (SHGs). Integrated with modern technologies for trust, transparency, and instant data insights — eliminating all manual paper processes.",
+    desc: "A social collaboration and networking platform digitally transforming Self-Help Groups (SHGs). Integrated with modern technologies for trust, transparency, and instant data insights, eliminating all manual paper processes.",
     icon: Globe,
     color: "from-[#0b80be] to-[#3da8e0]",
     bgColor: "bg-[#e8f4fb]",
@@ -23,7 +21,7 @@ const initiatives = [
   },
   {
     title: "Women's Marketplace",
-    desc: "A dedicated e-commerce marketplace — part of Digital Baila Phase 2 — built exclusively for women entrepreneurs to promote and grow their businesses locally and globally.",
+    desc: "A dedicated e-commerce marketplace (part of Digital Baila Phase 2) built exclusively for women entrepreneurs to promote and grow their businesses.",
     icon: ShoppingBag,
     color: "from-[#e07b00] to-[#f5b942]",
     bgColor: "bg-[#fff4e0]",
@@ -32,18 +30,18 @@ const initiatives = [
     tags: ["E-commerce", "Women-First", "Phase 2"]
   },
   {
-    title: "Goa Local Marketplace",
-    desc: "An online marketplace for Goans with creative talents — sell arts, crafts, products, and services locally and globally with full e-commerce features including payment and shipping.",
+    title: "Goa Community Marketplace",
+    desc: "An online marketplace for Goans with creative talents to sell arts, crafts, products, and services with full e-commerce features including payment and shipping.",
     icon: Store,
     color: "from-[#00a859] to-[#34d68b]",
     bgColor: "bg-[#e6f9f0]",
     iconColor: "text-[#00a859]",
     borderColor: "border-[#00a859]/20",
-    tags: ["Local Business", "Arts & Crafts", "Global Reach"]
+    tags: ["Business", "Arts & Crafts", "Global Reach"]
   },
   {
     title: "NGO Collaboration Platform",
-    desc: "A social platform for non-profit organizations to bring the local community and volunteers together for good causes. With 60+ NGOs in Goa, volunteers can register and collaborate across organizations.",
+    desc: "A social platform for non-profit organizations to bring the community and volunteers together for good causes. With 60+ NGOs in Goa, volunteers can register and collaborate across organizations.",
     icon: Users,
     color: "from-[#7c3aed] to-[#a78bfa]",
     bgColor: "bg-[#f3eeff]",
@@ -90,17 +88,13 @@ export default function Initiatives() {
               <h3 className="font-plus-jakarta font-bold text-navy text-[1.25rem] mb-4">{init.title}</h3>
               <p className="text-muted text-[0.95rem] leading-relaxed font-normal mb-8">{init.desc}</p>
               
-              <div className="flex flex-wrap gap-2.5 mb-10">
+              <div className="flex flex-wrap gap-2.5">
                 {init.tags.map((tag, j) => (
                   <span key={j} className={`bg-white border border-border/50 ${init.iconColor} text-[0.7rem] px-3.5 py-1.5 rounded-full font-bold tracking-wider uppercase`}>
                     {tag}
                   </span>
                 ))}
               </div>
-              
-              <Link href="#" className="inline-flex items-center gap-2 text-blue text-[0.9rem] font-bold group/link hover:gap-3 transition-all">
-                Learn more <ArrowRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
-              </Link>
             </motion.div>
           ))}
         </div>
