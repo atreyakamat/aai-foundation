@@ -24,9 +24,9 @@ export default function Footer() {
         </div>
 
         <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 list-none items-center">
-          <li><Link href="/about" className="text-muted text-[0.85rem] font-bold hover:text-navy transition-colors">About</Link></li>
-          <li><Link href="/programs" className="text-muted text-[0.85rem] font-bold hover:text-navy transition-colors">Programs</Link></li>
-          <li><Link href="/initiatives" className="text-muted text-[0.85rem] font-bold hover:text-navy transition-colors">Initiatives</Link></li>
+          <li><Link href="/about" className="text-muted text-[0.85rem] font-bold hover:text-navy transition-colors">About Us</Link></li>
+          <li><Link href="/programs" className="text-muted text-[0.85rem] font-bold hover:text-navy transition-colors">Our Programs</Link></li>
+          <li><Link href="/initiatives" className="text-muted text-[0.85rem] font-bold hover:text-navy transition-colors">Our Initiatives</Link></li>
         </ul>
 
         <div className="text-muted/60 text-[0.8rem] leading-relaxed md:text-right font-medium">

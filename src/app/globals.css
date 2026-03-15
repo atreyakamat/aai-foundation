@@ -5,7 +5,7 @@
   --font-plus-jakarta: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 
   --color-navy: #00277f;
-  --color-blue: #0b80be;
+  --color-blue: #09699b;
   --color-sky: #3da8e0;
   --color-skylight: #e8f4fb;
   --color-offwhite: #f5f8fc;
@@ -19,7 +19,7 @@
 
 :root {
   --navy: #00277f;
-  --blue: #0b80be;
+  --blue: #09699b;
   --sky: #3da8e0;
   --skylight: #e8f4fb;
   --white: #ffffff;
