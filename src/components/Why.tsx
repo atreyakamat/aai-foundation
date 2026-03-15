@@ -29,7 +29,7 @@ export default function Why() {
           viewport={{ once: true }}
           className="font-plus-jakarta text-[clamp(1.8rem,3.5vw,2.8rem)] font-extrabold text-navy leading-tight max-w-[600px] mb-14"
         >
-          Innovations are <span className="text-blue italic">essential</span> to grow &amp; survive in tomorrow&apos;s world.
+          Innovations are <span className="text-blue italic mx-1.5">essential</span> to grow &amp; survive in tomorrow&apos;s world.
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -39,8 +39,16 @@ export default function Why() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ backgroundColor: "white", y: -4, borderColor: "rgba(0,39,127,0.1)" }}
+              transition={{ 
+                opacity: { duration: 0.5, delay: i * 0.1 },
+                y: { duration: 0.5, delay: i * 0.1 }
+              }}
+              whileHover={{ 
+                backgroundColor: "white", 
+                y: -4, 
+                borderColor: "rgba(0,39,127,0.1)",
+                transition: { duration: 0.2, delay: 0 } 
+              }}
               className="p-8 rounded-2xl border border-border bg-offwhite transition-all duration-300 shadow-sm"
             >
               <div className="w-12 h-12 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center text-blue mb-6 group-hover:scale-110 transition-transform">

@@ -73,8 +73,16 @@ export default function Programs() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -5, borderColor: "rgba(11,128,190,0.3)", backgroundColor: "white" }}
+              transition={{ 
+                opacity: { duration: 0.5, delay: i * 0.1 },
+                y: { duration: 0.5, delay: i * 0.1 }
+              }}
+              whileHover={{ 
+                y: -5, 
+                borderColor: "rgba(11,128,190,0.3)", 
+                backgroundColor: "white",
+                transition: { duration: 0.2, delay: 0 } 
+              }}
               className="group relative bg-white border border-border rounded-2xl p-8 overflow-hidden transition-all duration-300 shadow-sm"
             >
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue/40 to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity" />

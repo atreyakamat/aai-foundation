@@ -75,8 +75,16 @@ export default function Initiatives() {
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -4, backgroundColor: "white", borderColor: "rgba(0,39,127,0.1)" }}
+              transition={{ 
+                opacity: { duration: 0.5, delay: i * 0.1 },
+                scale: { duration: 0.5, delay: i * 0.1 }
+              }}
+              whileHover={{ 
+                y: -4, 
+                backgroundColor: "white", 
+                borderColor: "rgba(0,39,127,0.1)",
+                transition: { duration: 0.2, delay: 0 } 
+              }}
               className="group relative bg-offwhite border border-border rounded-2xl p-10 transition-all duration-300 overflow-hidden shadow-sm"
             >
               <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${init.color} opacity-40`} />

@@ -34,8 +34,16 @@ export default function Governance() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -5, backgroundColor: "white", borderColor: "rgba(0,39,127,0.1)" }}
+              transition={{ 
+                opacity: { duration: 0.5, delay: i * 0.1 },
+                y: { duration: 0.5, delay: i * 0.1 }
+              }}
+              whileHover={{ 
+                y: -5, 
+                backgroundColor: "white", 
+                borderColor: "rgba(0,39,127,0.1)",
+                transition: { duration: 0.2, delay: 0 } 
+              }}
               className="bg-white border border-border rounded-2xl p-8 text-center transition-all duration-300 shadow-sm"
             >
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue to-navy border border-white/20 flex items-center justify-center text-white font-plus-jakarta font-extrabold text-xl mx-auto mb-6 shadow-md">
