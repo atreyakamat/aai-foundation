@@ -23,7 +23,7 @@ export default function Governance() {
             Governing Body
           </h2>
           <p className="mt-4 text-muted max-w-[560px] mx-auto leading-relaxed font-medium">
-            AAI is managed by a dedicated Managing Committee of governing members, committed to driving social welfare and innovation in Goa.
+            AAI is managed by a dedicated Managing Committee of governing members, committed to driving social welfare and innovation globally.
           </p>
         </div>
 

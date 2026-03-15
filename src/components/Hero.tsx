@@ -88,7 +88,7 @@ export default function Hero() {
       >
         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-blue/10 border border-blue/20 text-blue text-[0.8rem] font-bold tracking-[0.08em] uppercase px-5 py-2 rounded-full mb-8 backdrop-blur-sm">
           <span className="w-2 h-2 bg-blue rounded-full animate-pulse"></span>
-          NGO &middot; Goa, India &middot; Supporting Positive Change
+          Global Foundation &middot; Founded in Goa, India &middot; Supporting Positive Change
         </motion.div>
 
         <motion.h1 
@@ -101,7 +101,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p variants={itemVariants} className="mt-10 text-[1.15rem] text-muted max-w-[580px] leading-[1.7] font-medium tracking-tight">
-          AAI (All About Innovation) backs passionate entrepreneurs, women leaders, and bold startups using modern technology to solve real community challenges across Goa.
+          AAI (All About Innovation) is a global foundation that backs passionate entrepreneurs, women leaders, and bold startups using modern technology to solve real community challenges worldwide.
         </motion.p>
       </motion.div>
     </section>

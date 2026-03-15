@@ -69,10 +69,10 @@ export default function About() {
             </h2>
             <div className="space-y-5">
               <p className="text-muted leading-relaxed font-medium text-[1.05rem]">
-                AAI provides support, coaching & funding to startups and small businesses pursuing social, economic, and environmental outcomes with business models that create positive impact in the Goan community.
+                AAI provides support, coaching & funding to startups and small businesses pursuing social, economic, and environmental outcomes with business models that create positive impact in local and global communities.
               </p>
               <p className="text-muted/80 leading-relaxed font-normal">
-                We back passionate entrepreneurs who leverage modern technology startup methodologies to address key challenges facing our community today.
+                Founded in Goa, we back passionate entrepreneurs who leverage modern technology startup methodologies to address key challenges facing communities today.
               </p>
             </div>
             

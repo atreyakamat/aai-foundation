@@ -7,7 +7,7 @@ import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "About Us | AAI (All About Innovation)",
-  description: "Learn more about AAI Foundation, our mission to support positive change in Goa, and our dedicated governing committee.",
+  description: "Learn more about AAI Foundation, our global mission to support positive change, and our dedicated governing committee founded in Goa.",
 };
 
 export default function AboutPage() {

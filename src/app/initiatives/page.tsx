@@ -7,7 +7,7 @@ import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Social Initiatives | AAI (All About Innovation)",
-  description: "Explore AAI's social initiatives including Digital Baila, TechForward, and community marketplaces driving innovation in Goa.",
+  description: "Explore AAI's global social initiatives including Digital Baila, TechForward, and community marketplaces driving innovation worldwide.",
 };
 
 export default function InitiativesPage() {

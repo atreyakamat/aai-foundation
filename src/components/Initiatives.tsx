@@ -30,8 +30,8 @@ const initiatives = [
     tags: ["E-commerce", "Women-First", "Phase 2"]
   },
   {
-    title: "Goa Community Marketplace",
-    desc: "An online marketplace for Goans with creative talents to sell arts, crafts, products, and services with full e-commerce features including payment and shipping.",
+    title: "Global Collaboration Marketplace",
+    desc: "Starting with Goan creative talents, this online marketplace allows creators to sell arts, crafts, and products worldwide with full e-commerce features including global payment and shipping.",
     icon: Store,
     color: "from-[#00a859] to-[#34d68b]",
     bgColor: "bg-[#e6f9f0]",
@@ -41,7 +41,7 @@ const initiatives = [
   },
   {
     title: "NGO Collaboration Platform",
-    desc: "A social platform for non-profit organizations to bring the community and volunteers together for good causes. With 60+ NGOs in Goa, volunteers can register and collaborate across organizations.",
+    desc: "A global social platform for non-profit organizations to bring the community and volunteers together. Founded with 60+ NGOs in Goa, scaling to connect volunteers across organizations worldwide.",
     icon: Users,
     color: "from-[#7c3aed] to-[#a78bfa]",
     bgColor: "bg-[#f3eeff]",
@@ -61,10 +61,10 @@ export default function Initiatives() {
             Social Initiatives
           </div>
           <h2 className="font-plus-jakarta text-[clamp(1.8rem,3.5vw,2.7rem)] font-extrabold leading-tight tracking-tight text-navy">
-            Projects that power<br/>community change
+            Projects that power<br/>global change
           </h2>
           <p className="mt-4 text-muted max-w-[500px] leading-relaxed font-medium">
-            Real platforms and products solving real problems for communities, women entrepreneurs, and small businesses in Goa.
+            Real platforms and products solving real problems for communities, women entrepreneurs, and small businesses worldwide.
           </p>
         </div>
 

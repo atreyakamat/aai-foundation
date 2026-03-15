@@ -38,7 +38,7 @@ const programs = [
   {
     icon: Handshake,
     title: "Community Volunteering",
-    desc: "Connecting volunteers with NGOs and causes across Goa, with 60+ NGOs in the network and growing every month.",
+    desc: "Connecting volunteers with NGOs and causes worldwide, with 60+ NGOs in the initial network and growing every month.",
     tags: ["60+ NGOs", "Volunteer Network", "Social Impact"]
   },
   {
