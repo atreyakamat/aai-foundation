@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Logo from "./Logo";
 import { MapPin, Heart } from "lucide-react";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
         <div>
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.svg" alt="AAI Logo" width={40} height={40} />
+            <Logo width={40} height={40} />
             <div className="font-plus-jakarta text-[1.1rem] font-extrabold tracking-tight text-navy">
               All About <span className="text-blue">Innovation</span>
             </div>

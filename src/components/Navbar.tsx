@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 
 export default function Navbar() {
   return (
     <nav aria-label="Main Navigation" className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[5%] py-4 bg-white/70 backdrop-blur-md border-b border-border/50">
       <Link href="/" className="flex items-center gap-3">
-        <Image src="/logo.svg" alt="AAI Logo" width={42} height={42} />
+        <Logo width={42} height={42} />
         <div className="font-plus-jakarta font-extrabold text-base text-navy leading-tight">
           All About<br/><span className="text-blue">Innovation</span>
         </div>

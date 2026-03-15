@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { UserRound, Lightbulb, Rocket, Store } from "lucide-react";
+import Logo from "./Logo";
 
 export default function About() {
   const backItems = [
@@ -48,7 +48,7 @@ export default function About() {
               ))}
 
               <div className="relative z-10 w-40 h-40 bg-white rounded-full border border-border shadow-xl flex items-center justify-center p-6">
-                <Image src="/logo.svg" alt="AAI Logo" width={120} height={120} />
+                <Logo width={120} height={120} />
               </div>
             </div>
           </div>

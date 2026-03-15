@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 import { motion, Variants } from "framer-motion";
-import Image from "next/image";
 import dynamic from "next/dynamic";
+import Logo from "./Logo";
 
 const Particles = dynamic(() => import("./ui/particles").then((mod) => mod.Particles), {
   ssr: false,
@@ -17,18 +17,18 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.05,
+        delayChildren: 0,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 12 },
+    hidden: { opacity: 0, y: 8 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.4, ease: "easeOut" },
     },
   };
 
@@ -74,14 +74,7 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-blue/10 rounded-full blur-3xl scale-125"></div>
-              <Image 
-                src="/logo.svg" 
-                alt="AAI Logo" 
-                width={300} 
-                height={300} 
-                className="relative z-10 opacity-80" 
-                priority
-              />
+              <Logo width={300} height={300} className="relative z-10 opacity-80" />
             </div>
           </motion.div>
         </motion.div>
