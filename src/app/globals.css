@@ -11,9 +11,9 @@
   --color-offwhite: #f5f8fc;
   --color-light: #eaf2f9;
   --color-border: #d6e6f2;
-  --color-text: #1a2a3a;
-  --color-muted: #5a748a;
-  --color-accent: #e07b00;
+  --color-text: #111a22;
+  --color-muted: #475a6b;
+  --color-accent: #d17200;
   --color-accentlt: #fff4e0;
 }
 
@@ -26,9 +26,9 @@
   --offwhite: #f5f8fc;
   --light: #eaf2f9;
   --border: #d6e6f2;
-  --text: #1a2a3a;
-  --muted: #5a748a;
-  --accent: #e07b00;
+  --text: #111a22;
+  --muted: #475a6b;
+  --accent: #d17200;
   --accentlt: #fff4e0;
 }
 

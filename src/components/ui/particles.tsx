@@ -214,7 +214,6 @@ export const Particles: React.FC<ParticlesProps> = ({
         );
       }
     });
-    window.requestAnimationFrame(animate);
   };
 
   const onMouseMove = () => {
@@ -236,11 +235,19 @@ export const Particles: React.FC<ParticlesProps> = ({
       context.current = canvasRef.current.getContext("2d");
     }
     initCanvas();
-    animate();
+    
+    let animationFrameId: number;
+    const render = () => {
+      animate();
+      animationFrameId = window.requestAnimationFrame(render);
+    };
+    render();
+    
     window.addEventListener("resize", initCanvas);
 
     return () => {
       window.removeEventListener("resize", initCanvas);
+      window.cancelAnimationFrame(animationFrameId);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color]);

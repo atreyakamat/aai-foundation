@@ -3,7 +3,11 @@
 import { useRef } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import { Particles } from "./ui/particles";
+import dynamic from "next/dynamic";
+
+const Particles = dynamic(() => import("./ui/particles").then((mod) => mod.Particles), {
+  ssr: false,
+});
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);

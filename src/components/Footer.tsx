@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-offwhite text-navy border-t border-border pt-16 pb-12 px-[5%] relative overflow-hidden">
+    <footer aria-label="Site Footer" className="bg-offwhite text-navy border-t border-border pt-16 pb-12 px-[5%] relative overflow-hidden">
       {/* Subtle Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-blue/20 to-transparent" />
       

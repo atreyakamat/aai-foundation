@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[5%] py-4 bg-white/70 backdrop-blur-md border-b border-border/50">
+    <nav aria-label="Main Navigation" className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[5%] py-4 bg-white/70 backdrop-blur-md border-b border-border/50">
       <Link href="/" className="flex items-center gap-3">
         <Image src="/logo.svg" alt="AAI Logo" width={42} height={42} />
         <div className="font-plus-jakarta font-extrabold text-base text-navy leading-tight">

@@ -82,7 +82,7 @@ export default function IndustryReadiness() {
                     <feature.icon size={24} />
                   </div>
                   <div>
-                    <h4 className="text-navy font-bold text-[1rem] mb-1">{feature.title}</h4>
+                    <h3 className="text-navy font-bold text-[1rem] mb-1">{feature.title}</h3>
                     <p className="text-muted text-[0.85rem] leading-snug">{feature.desc}</p>
                   </div>
                 </div>
