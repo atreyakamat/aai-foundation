@@ -1,8 +1,6 @@
 "use client";
 
-import React, { forwardRef, useMemo, useRef, CSSProperties } from "react";
-import { motion, useAnimationFrame, useMotionValue, useTransform } from "framer-motion";
-import { useMousePositionRef } from "@/hooks/use-mouse-position-ref";
+import React, { forwardRef, useMemo, useRef, CSSProperties, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 interface StyleTransition {
@@ -20,88 +18,82 @@ interface TextCursorProximityProps {
   as?: React.ElementType;
 }
 
-const Letter = ({
-  letter,
-  mousePositionRef,
-  radius,
-  styles,
-  falloff,
-}: {
-  letter: string;
-  mousePositionRef: React.MutableRefObject<{ x: number; y: number }>;
-  radius: number;
-  styles: Partial<{ [K in keyof CSSProperties]: StyleTransition }>;
-  falloff: "linear" | "exponential" | "gaussian";
-}) => {
-  const letterRef = useRef<HTMLSpanElement>(null);
-  const proximity = useMotionValue(0);
-
-  useAnimationFrame(() => {
-    if (!letterRef.current) return;
-
-    const rect = letterRef.current.getBoundingClientRect();
-    const letterX = rect.left + rect.width / 2;
-    const letterY = rect.top + rect.height / 2;
-
-    const containerRect = letterRef.current.closest('section')?.getBoundingClientRect();
-    if (!containerRect) return;
-
-    const mouseX = mousePositionRef.current.x + containerRect.left;
-    const mouseY = mousePositionRef.current.y + containerRect.top;
-
-    const distance = Math.sqrt(
-      Math.pow(mouseX - letterX, 2) + Math.pow(mouseY - letterY, 2)
-    );
-
-    let v = 0;
-    if (distance < radius) {
-      if (falloff === "linear") {
-        v = 1 - distance / radius;
-      } else if (falloff === "exponential") {
-        v = Math.pow(1 - distance / radius, 2);
-      } else if (falloff === "gaussian") {
-        v = Math.exp(-Math.pow(distance / (radius / 2), 2));
-      }
-    }
-    proximity.set(v);
-  });
-
-  const animatedStyles = Object.keys(styles).reduce((acc, key) => {
-    const style = styles[key as keyof CSSProperties]!;
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const transformedValue = useTransform(proximity, [0, 1], [style.from, style.to]);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (acc as any)[key] = transformedValue;
-    return acc;
-  }, {} as Record<string, unknown>);
-
-  return (
-    <motion.span
-      ref={letterRef}
-      style={animatedStyles as CSSProperties}
-      className="inline-block whitespace-pre"
-    >
-      {letter}
-    </motion.span>
-  );
-};
-
 export const TextCursorProximity = forwardRef<HTMLElement, TextCursorProximityProps>(
   ({ children, styles, containerRef, radius = 100, falloff = "linear", className, as: Component = "span" }, ref) => {
-    const mousePositionRef = useMousePositionRef(containerRef);
     const letters = useMemo(() => children.split(""), [children]);
+    const lettersRef = useRef<(HTMLSpanElement | null)[]>([]);
+
+    useEffect(() => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const handleMouseMove = (e: MouseEvent) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        lettersRef.current.forEach((letter) => {
+          if (!letter) return;
+
+          const rect = letter.getBoundingClientRect();
+          const letterX = rect.left + rect.width / 2;
+          const letterY = rect.top + rect.height / 2;
+
+          const distance = Math.sqrt(
+            Math.pow(mouseX - letterX, 2) + Math.pow(mouseY - letterY, 2)
+          );
+
+          let v = 0;
+          if (distance < radius) {
+            if (falloff === "linear") {
+              v = 1 - distance / radius;
+            } else if (falloff === "exponential") {
+              v = Math.pow(1 - distance / radius, 2);
+            } else if (falloff === "gaussian") {
+              v = Math.exp(-Math.pow(distance / (radius / 2), 2));
+            }
+          }
+
+          // Apply styles via CSS variables for maximum performance
+          Object.keys(styles).forEach((key) => {
+            const style = styles[key as keyof CSSProperties]!;
+            const from = typeof style.from === 'number' ? style.from : parseFloat(style.from as string);
+            const to = typeof style.to === 'number' ? style.to : parseFloat(style.to as string);
+            const unit = typeof style.from === 'string' ? (style.from.match(/[a-z%]+$/)?.[0] || '') : '';
+            
+            const value = from + (to - from) * v;
+            
+            if (key === 'color') {
+              // Special handling for colors if needed, but for navy to blue:
+              // For simplicity, let's assume numeric values or handled separately.
+              // If it's the specific navy/blue transition:
+              if (style.from === 'var(--color-navy)' && style.to === 'var(--color-blue)') {
+                letter.style.color = v > 0.5 ? 'var(--color-blue)' : 'var(--color-navy)';
+              }
+            } else {
+              letter.style.setProperty(`--proximity-${key}`, `${value}${unit}`);
+              // Fallback for non-variable supported properties if any
+              (letter.style as any)[key] = `${value}${unit}`;
+            }
+          });
+        });
+      };
+
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, [containerRef, radius, falloff, styles]);
 
     return (
       <Component ref={ref} className={cn("inline-block", className)}>
         {letters.map((letter, i) => (
-          <Letter
+          <span
             key={i}
-            letter={letter}
-            mousePositionRef={mousePositionRef}
-            radius={radius}
-            styles={styles}
-            falloff={falloff}
-          />
+            ref={(el) => {
+              lettersRef.current[i] = el;
+            }}
+            className="inline-block whitespace-pre transition-all duration-200 ease-out"
+          >
+            {letter}
+          </span>
         ))}
       </Component>
     );

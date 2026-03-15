@@ -32,7 +32,7 @@ function hexToRgb(hex: string): number[] {
 
 export const Particles: React.FC<ParticlesProps> = ({
   className = "",
-  quantity = 30,
+  quantity = 80,
   staticity = 50,
   ease = 50,
   size = 0.4,
@@ -220,8 +220,8 @@ export const Particles: React.FC<ParticlesProps> = ({
     if (canvasRef.current) {
       const rect = canvasRef.current.getBoundingClientRect();
       const { w, h } = canvasSize.current;
-      const x = mousePosition.x - rect.left - w / 2;
-      const y = mousePosition.y - rect.top - h / 2;
+      const x = mousePosition.current.x - rect.left - w / 2;
+      const y = mousePosition.current.y - rect.top - h / 2;
       const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
       if (inside) {
         mouse.current.x = x;
@@ -238,6 +238,7 @@ export const Particles: React.FC<ParticlesProps> = ({
     
     let animationFrameId: number;
     const render = () => {
+      onMouseMove();
       animate();
       animationFrameId = window.requestAnimationFrame(render);
     };
@@ -251,11 +252,6 @@ export const Particles: React.FC<ParticlesProps> = ({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color]);
-
-  useEffect(() => {
-    onMouseMove();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mousePosition.x, mousePosition.y]);
 
   useEffect(() => {
     initCanvas();
