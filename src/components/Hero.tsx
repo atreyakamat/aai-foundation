@@ -57,9 +57,9 @@ export default function Hero() {
       {/* Visual Component (Right Side) - Logo based */}
       <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[45%] h-[600px] hidden lg:flex items-center justify-center z-10 pointer-events-none">
         <motion.div 
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative w-full max-w-[450px]"
         >
           <motion.div 
