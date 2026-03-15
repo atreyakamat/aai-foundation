@@ -24,11 +24,11 @@ export default function Hero() {
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: 0, y: 12 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Magic UI Particles Background */}
       <Particles
         className="absolute inset-0 z-0"
-        quantity={120}
+        quantity={80}
         ease={80}
         color="#0b80be"
         refresh
@@ -74,7 +74,14 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-blue/10 rounded-full blur-3xl scale-125"></div>
-              <Image src="/logo.svg" alt="AAI Logo" width={300} height={300} className="relative z-10 opacity-80" />
+              <Image 
+                src="/logo.svg" 
+                alt="AAI Logo" 
+                width={300} 
+                height={300} 
+                className="relative z-10 opacity-80" 
+                priority
+              />
             </div>
           </motion.div>
         </motion.div>
