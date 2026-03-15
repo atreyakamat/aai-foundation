@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Magic UI Particles Background */}
       <Particles
         className="absolute inset-0 z-0"
-        quantity={80}
+        quantity={30}
         ease={80}
         color="#0b80be"
         refresh
@@ -50,12 +50,7 @@ export default function Hero() {
       <div className="hero-grid-bg opacity-20"></div>
       
       {/* Background Shapes */}
-      <motion.div 
-        animate={{ 
-          scale: [1, 1.1, 1],
-          rotate: [0, 5, 0],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      <div 
         className="hero-shape w-[640px] h-[640px] -top-[200px] -right-[140px] bg-[radial-gradient(circle,rgba(11,128,190,0.1),transparent_70%)]" 
       />
       
@@ -68,8 +63,7 @@ export default function Hero() {
           className="relative w-full max-w-[450px]"
         >
           <motion.div 
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            initial={{ y: 0 }}
             className="flex items-center justify-center"
           >
             <div className="relative">
