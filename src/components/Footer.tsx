@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-muted text-[0.85rem] mt-4 flex items-center gap-2 font-medium">
-            <MapPin size={16} className="text-blue/60" /> Founded in Goa, India &middot; Supporting Positive Change Globally
+            <MapPin size={16} className="text-blue/60" /> Supporting Positive Change Globally
           </p>
         </div>
 

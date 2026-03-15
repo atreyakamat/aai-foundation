@@ -31,7 +31,7 @@ const initiatives = [
   },
   {
     title: "Global Collaboration Marketplace",
-    desc: "Starting with Goan creative talents, this online marketplace allows creators to sell arts, crafts, and products worldwide with full e-commerce features including global payment and shipping.",
+    desc: "A worldwide online marketplace that allows creators to sell arts, crafts, and products globally with full e-commerce features including global payment and shipping.",
     icon: Store,
     color: "from-[#00a859] to-[#34d68b]",
     bgColor: "bg-[#e6f9f0]",
@@ -41,7 +41,7 @@ const initiatives = [
   },
   {
     title: "NGO Collaboration Platform",
-    desc: "A global social platform for non-profit organizations to bring the community and volunteers together. Founded with 60+ NGOs in Goa, scaling to connect volunteers across organizations worldwide.",
+    desc: "A global social platform for non-profit organizations to bring the community and volunteers together, connecting volunteers across organizations worldwide.",
     icon: Users,
     color: "from-[#7c3aed] to-[#a78bfa]",
     bgColor: "bg-[#f3eeff]",

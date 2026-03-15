@@ -88,7 +88,7 @@ export default function Hero() {
       >
         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-blue/10 border border-blue/20 text-blue text-[0.8rem] font-bold tracking-[0.08em] uppercase px-5 py-2 rounded-full mb-8 backdrop-blur-sm">
           <span className="w-2 h-2 bg-blue rounded-full animate-pulse"></span>
-          Global Foundation &middot; Founded in Goa, India &middot; Supporting Positive Change
+          Global Foundation &middot; Supporting Positive Change Worldwide
         </motion.div>
 
         <motion.h1 

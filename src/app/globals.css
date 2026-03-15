@@ -32,6 +32,65 @@
   --accentlt: #fff4e0;
 }
 
+.logo-white { fill: #fff; stroke: var(--color-blue); stroke-miterlimit: 10; stroke-width: 7.11265px; }
+.logo-navy { fill: var(--color-navy); }
+.logo-blue { fill: var(--color-blue); }
+.logo-blue-alt-1 { fill: #0d80be; }
+.logo-blue-alt-2 { fill: #0f81bb; }
+.logo-blue-alt-3 { fill: #0f80bd; }
+.logo-blue-alt-4 { fill: #1780b5; }
+.logo-blue-alt-5 { fill: #2e8cb8; }
+.logo-blue-alt-6 { fill: #0e7fbc; }
+.logo-blue-alt-7 { fill: #0980c1; }
+.logo-blue-alt-8 { fill: #097fc2; }
+.logo-blue-alt-9 { fill: #097fbe; }
+.logo-blue-alt-10 { fill: #0b80c2; }
+.logo-blue-alt-11 { fill: #0e7fbe; }
+.logo-blue-alt-12 { fill: #0e80ba; }
+.logo-blue-alt-13 { fill: #0f7ebc; }
+.logo-blue-alt-14 { fill: #107ebb; }
+.logo-blue-alt-15 { fill: #0e7fc2; }
+.logo-blue-alt-16 { fill: #0c80bd; }
+.logo-blue-alt-17 { fill: #0f81be; }
+.logo-blue-alt-18 { fill: #0d7fbc; }
+.logo-blue-alt-19 { fill: #1081bc; }
+.logo-blue-alt-20 { fill: #1080c0; }
+.logo-blue-alt-21 { fill: #117fb6; }
+.logo-blue-alt-22 { fill: #1082c0; }
+.logo-blue-alt-23 { fill: #0e81bf; }
+.logo-blue-alt-24 { fill: #127eba; }
+.logo-blue-alt-25 { fill: #0e80bf; }
+.logo-blue-alt-26 { fill: #137ebd; }
+.logo-blue-alt-27 { fill: #1381ba; }
+.logo-blue-alt-28 { fill: #1980b4; }
+.logo-blue-alt-29 { fill: #147fbc; }
+.logo-blue-alt-30 { fill: #1381b5; }
+.logo-blue-alt-31 { fill: #1b82ba; }
+.logo-blue-alt-32 { fill: #1382bb; }
+.logo-blue-alt-33 { fill: #197fb5; }
+.logo-blue-alt-34 { fill: #1a80b3; }
+.logo-blue-alt-35 { fill: #1881bc; }
+.logo-blue-alt-36 { fill: #167fb8; }
+.logo-blue-alt-37 { fill: #1a81b6; }
+.logo-blue-alt-38 { fill: #1683ba; }
+.logo-blue-alt-39 { fill: #1681b8; }
+.logo-blue-alt-40 { fill: #1a7eaf; }
+.logo-blue-alt-41 { fill: #1383b9; }
+.logo-blue-alt-42 { fill: #1d7fb6; }
+.logo-blue-alt-43 { fill: #1683b6; }
+.logo-blue-alt-44 { fill: #2c82af; }
+.logo-blue-alt-45 { fill: #3789b3; }
+.logo-blue-alt-46 { fill: #1784b7; }
+.logo-blue-alt-47 { fill: #2284b6; }
+.logo-blue-alt-48 { fill: #1781b4; }
+.logo-blue-alt-49 { fill: #2481b1; }
+.logo-blue-alt-50 { fill: #247ead; }
+.logo-blue-alt-51 { fill: #1e80ac; }
+.logo-blue-alt-52 { fill: #237dac; }
+.logo-blue-alt-53 { fill: #2f89ad; }
+.logo-blue-alt-54 { fill: #1f88b1; }
+.logo-blue-alt-55 { fill: #1f83b3; }
+
 @layer base {
   * {
     @apply box-border m-0 p-0;
