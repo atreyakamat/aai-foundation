@@ -72,12 +72,12 @@ export default function Initiatives() {
           {initiatives.map((init, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.98 }}
+              initial={{ opacity: 0, scale: 0.99 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ 
-                opacity: { duration: 0.5, delay: i * 0.1 },
-                scale: { duration: 0.5, delay: i * 0.1 }
+                opacity: { duration: 0.3, delay: i * 0.02 },
+                scale: { duration: 0.3, delay: i * 0.02 }
               }}
               whileHover={{ 
                 y: -4, 

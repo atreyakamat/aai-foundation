@@ -26,10 +26,10 @@ export default function Stats() {
         {stats.map((stat, i) => (
           <motion.div 
             key={i}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.02, duration: 0.3 }}
             className="flex flex-col items-center group hover:-translate-y-1 transition-transform duration-300"
           >
             <div className="text-blue/30 mb-3 group-hover:text-blue transition-colors">

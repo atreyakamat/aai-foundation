@@ -43,10 +43,10 @@ export default function TechForward() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 text-accent text-[0.75rem] font-bold uppercase tracking-[0.09em] px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
               <Star size={14} /> Featured Initiative
@@ -89,10 +89,10 @@ export default function TechForward() {
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="bg-white border border-border rounded-[32px] p-12 text-center relative overflow-hidden shadow-md"
           >
             {/* Visual Decoration */}

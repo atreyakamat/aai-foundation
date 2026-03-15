@@ -24,9 +24,10 @@ export default function Why() {
       
       <div className="max-w-[1100px] mx-auto relative z-10">
         <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
           className="font-plus-jakarta text-[clamp(1.8rem,3.5vw,2.8rem)] font-extrabold text-navy leading-tight max-w-[600px] mb-14"
         >
           Innovations are <span className="text-blue italic mx-1.5">essential</span> to grow &amp; survive in tomorrow&apos;s world.
@@ -36,12 +37,12 @@ export default function Why() {
           {whyCards.map((card, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ 
-                opacity: { duration: 0.5, delay: i * 0.1 },
-                y: { duration: 0.5, delay: i * 0.1 }
+                opacity: { duration: 0.3, delay: i * 0.02 },
+                y: { duration: 0.3, delay: i * 0.02 }
               }}
               whileHover={{ 
                 backgroundColor: "white", 

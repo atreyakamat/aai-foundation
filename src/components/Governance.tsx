@@ -31,12 +31,12 @@ export default function Governance() {
           {team.map((member, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ 
-                opacity: { duration: 0.5, delay: i * 0.1 },
-                y: { duration: 0.5, delay: i * 0.1 }
+                opacity: { duration: 0.3, delay: i * 0.02 },
+                y: { duration: 0.3, delay: i * 0.02 }
               }}
               whileHover={{ 
                 y: -5, 

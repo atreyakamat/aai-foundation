@@ -36,10 +36,10 @@ export default function IndustryReadiness() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             <div className="inline-flex items-center gap-2 bg-blue/10 border border-blue/20 text-blue text-[0.75rem] font-bold uppercase tracking-[0.09em] px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
               <Rocket size={14} /> In Partnership with SPARK+ Academia
@@ -91,10 +91,10 @@ export default function IndustryReadiness() {
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="relative"
           >
             <div className="bg-offwhite border border-border rounded-[40px] p-10 relative overflow-hidden shadow-sm">
