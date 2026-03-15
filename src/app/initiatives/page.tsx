@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Initiatives from "@/components/Initiatives";
 import TechForward from "@/components/TechForward";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+
+export const metadata: Metadata = {
+  title: "Social Initiatives | AAI (All About Innovation)",
+  description: "Explore AAI's social initiatives including Digital Baila, TechForward, and community marketplaces driving innovation in Goa.",
+};
 
 export default function InitiativesPage() {
   return (

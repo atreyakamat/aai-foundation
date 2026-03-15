@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { motion, Variants } from "framer-motion";
-import { Compass, ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { Particles } from "./ui/particles";
 

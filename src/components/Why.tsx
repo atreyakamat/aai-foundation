@@ -29,7 +29,7 @@ export default function Why() {
           viewport={{ once: true }}
           className="font-plus-jakarta text-[clamp(1.8rem,3.5vw,2.8rem)] font-extrabold text-navy leading-tight max-w-[600px] mb-14"
         >
-          Innovations are <span className="text-blue italic">essential</span> to grow & survive in tomorrow's world.
+          Innovations are <span className="text-blue italic">essential</span> to grow &amp; survive in tomorrow&apos;s world.
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

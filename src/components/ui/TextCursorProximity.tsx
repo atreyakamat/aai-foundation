@@ -69,14 +69,16 @@ const Letter = ({
   const animatedStyles = Object.keys(styles).reduce((acc, key) => {
     const style = styles[key as keyof CSSProperties]!;
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    acc[key] = useTransform(proximity, [0, 1], [style.from, style.to]);
+    const transformedValue = useTransform(proximity, [0, 1], [style.from, style.to]);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (acc as any)[key] = transformedValue;
     return acc;
-  }, {} as any);
+  }, {} as Record<string, unknown>);
 
   return (
     <motion.span
       ref={letterRef}
-      style={animatedStyles}
+      style={animatedStyles as CSSProperties}
       className="inline-block whitespace-pre"
     >
       {letter}

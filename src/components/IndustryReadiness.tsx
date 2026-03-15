@@ -9,8 +9,7 @@ import {
   Users, 
   Lightbulb, 
   Rocket,
-  CheckCircle2,
-  ArrowRight
+  CheckCircle2
 } from "lucide-react";
 import { TextCursorProximity } from "./ui/TextCursorProximity";
 
@@ -73,7 +72,7 @@ export default function IndustryReadiness() {
             </h2>
             
             <p className="text-muted max-w-[540px] leading-relaxed font-normal mb-10 text-[1.1rem]">
-              Equipping students, job seekers, and professionals with practical, industry-relevant skills to thrive in today's competitive workforce. Bridging the gap between education and employment.
+              Equipping students, job seekers, and professionals with practical, industry-relevant skills to thrive in today&apos;s competitive workforce. Bridging the gap between education and employment.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

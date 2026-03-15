@@ -28,7 +28,7 @@ export default function CTA() {
             Get in Touch
           </h2>
           <p className="text-muted text-[1.1rem] leading-relaxed font-medium max-w-[580px] mx-auto mb-12">
-            Whether you're an entrepreneur, a student, a volunteer, or a donor, there's a place for you in the AAI community. Join us in building a brighter future for Goa.
+            Whether you&apos;re an entrepreneur, a student, a volunteer, or a donor, there&apos;s a place for you in the AAI community. Join us in building a brighter future for Goa.
           </p>
           <div className="flex flex-col items-center gap-2">
             <a 
