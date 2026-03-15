@@ -22,24 +22,35 @@ export const TextCursorProximity = forwardRef<HTMLElement, TextCursorProximityPr
   ({ children, styles, containerRef, radius = 100, falloff = "linear", className, as: Component = "span" }, ref) => {
     const letters = useMemo(() => children.split(""), [children]);
     const lettersRef = useRef<(HTMLSpanElement | null)[]>([]);
+    const letterPositions = useRef<{ x: number; y: number }[]>([]);
+
+    const updateLetterPositions = () => {
+      letterPositions.current = lettersRef.current.map((letter) => {
+        if (!letter) return { x: 0, y: 0 };
+        const rect = letter.getBoundingClientRect();
+        return {
+          x: rect.left + rect.width / 2,
+          y: rect.top + rect.height / 2,
+        };
+      });
+    };
 
     useEffect(() => {
       const container = containerRef.current;
       if (!container) return;
 
+      updateLetterPositions();
+
       const handleMouseMove = (e: MouseEvent) => {
         const mouseX = e.clientX;
         const mouseY = e.clientY;
 
-        lettersRef.current.forEach((letter) => {
+        letterPositions.current.forEach((pos, i) => {
+          const letter = lettersRef.current[i];
           if (!letter) return;
 
-          const rect = letter.getBoundingClientRect();
-          const letterX = rect.left + rect.width / 2;
-          const letterY = rect.top + rect.height / 2;
-
           const distance = Math.sqrt(
-            Math.pow(mouseX - letterX, 2) + Math.pow(mouseY - letterY, 2)
+            Math.pow(mouseX - pos.x, 2) + Math.pow(mouseY - pos.y, 2)
           );
 
           let v = 0;
@@ -63,23 +74,29 @@ export const TextCursorProximity = forwardRef<HTMLElement, TextCursorProximityPr
             const value = from + (to - from) * v;
             
             if (key === 'color') {
-              // Special handling for colors if needed, but for navy to blue:
-              // For simplicity, let's assume numeric values or handled separately.
-              // If it's the specific navy/blue transition:
               if (style.from === 'var(--color-navy)' && style.to === 'var(--color-blue)') {
                 letter.style.color = v > 0.5 ? 'var(--color-blue)' : 'var(--color-navy)';
               }
             } else {
               letter.style.setProperty(`--proximity-${key}`, `${value}${unit}`);
-              // Fallback for non-variable supported properties if any
               (letter.style as any)[key] = `${value}${unit}`;
             }
           });
         });
       };
 
+      const handleResize = () => updateLetterPositions();
+      const handleScroll = () => updateLetterPositions();
+
       window.addEventListener("mousemove", handleMouseMove);
-      return () => window.removeEventListener("mousemove", handleMouseMove);
+      window.addEventListener("resize", handleResize);
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+        window.removeEventListener("resize", handleResize);
+        window.removeEventListener("scroll", handleScroll);
+      };
     }, [containerRef, radius, falloff, styles]);
 
     return (

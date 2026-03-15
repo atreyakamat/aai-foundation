@@ -17,18 +17,18 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.05,
+        staggerChildren: 0.02,
         delayChildren: 0,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 8 },
+    hidden: { opacity: 0, y: 4 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: "easeOut" },
+      transition: { duration: 0.3, ease: "easeOut" },
     },
   };
 
@@ -82,7 +82,7 @@ export default function Hero() {
 
       <motion.div 
         variants={containerVariants}
-        initial="hidden"
+        initial={false}
         animate="visible"
         className="relative z-20 max-w-[850px]"
       >

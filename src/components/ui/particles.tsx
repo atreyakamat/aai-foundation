@@ -61,6 +61,7 @@ export const Particles: React.FC<ParticlesProps> = ({
   const mousePosition = useMousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
+  const canvasRect = useRef<DOMRect | null>(null);
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
 
   const circleParams = (): Circle => {
@@ -136,6 +137,7 @@ export const Particles: React.FC<ParticlesProps> = ({
       canvasRef.current.style.width = `${canvasSize.current.w}px`;
       canvasRef.current.style.height = `${canvasSize.current.h}px`;
       context.current.scale(dpr, dpr);
+      canvasRect.current = canvasRef.current.getBoundingClientRect();
     }
   };
 
@@ -216,12 +218,11 @@ export const Particles: React.FC<ParticlesProps> = ({
     });
   };
 
-  const onMouseMove = () => {
-    if (canvasRef.current) {
-      const rect = canvasRef.current.getBoundingClientRect();
+  const updateMousePosition = () => {
+    if (canvasRect.current) {
       const { w, h } = canvasSize.current;
-      const x = mousePosition.current.x - rect.left - w / 2;
-      const y = mousePosition.current.y - rect.top - h / 2;
+      const x = mousePosition.current.x - canvasRect.current.left - w / 2;
+      const y = mousePosition.current.y - canvasRect.current.top - h / 2;
       const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
       if (inside) {
         mouse.current.x = x;
@@ -238,16 +239,28 @@ export const Particles: React.FC<ParticlesProps> = ({
     
     let animationFrameId: number;
     const render = () => {
-      onMouseMove();
+      updateMousePosition();
       animate();
       animationFrameId = window.requestAnimationFrame(render);
     };
     render();
     
-    window.addEventListener("resize", initCanvas);
+    const handleResize = () => {
+      initCanvas();
+    };
+
+    const handleScroll = () => {
+      if (canvasRef.current) {
+        canvasRect.current = canvasRef.current.getBoundingClientRect();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("resize", initCanvas);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
       window.cancelAnimationFrame(animationFrameId);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
