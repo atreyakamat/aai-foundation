@@ -31,15 +31,14 @@ export default function CTA() {
             Whether you&apos;re an entrepreneur, a student, a volunteer, or a donor, there&apos;s a place for you in the AAI community. Join us in building a brighter future worldwide.
           </p>
           <div className="flex flex-col items-center gap-2">
-            <a 
-              href="mailto:aaingo@sparkplustech.com" 
+            <a
+              href="mailto:hello@aaiimpact.org"
               className="text-blue font-plus-jakarta font-bold text-[1.2rem] hover:text-navy transition-colors flex items-center gap-3"
             >
               <Mail size={24} />
-              aaingo@sparkplustech.com
+              hello@aaiimpact.org
             </a>
-          </div>
-        </div>
+          </div>        </div>
       </motion.div>
     </section>
   );
