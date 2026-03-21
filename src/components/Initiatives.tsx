@@ -47,7 +47,7 @@ const initiatives = [
     bgColor: "bg-[#f3eeff]",
     iconColor: "text-[#7c3aed]",
     borderColor: "border-[#7c3aed]/20",
-    tags: ["60+ NGOs", "Volunteers", "Community"]
+    tags: ["Global Platform", "Volunteers", "Community"]
   }
 ];
 

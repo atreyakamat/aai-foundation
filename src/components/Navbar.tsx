@@ -17,7 +17,6 @@ export default function Navbar() {
         <li><Link href="/#industry-readiness" className="text-muted text-sm font-medium hover:text-navy transition-colors">Industry</Link></li>
         <li><Link href="/#programs" className="text-muted text-sm font-medium hover:text-navy transition-colors">Programs</Link></li>
         <li><Link href="/#initiatives" className="text-muted text-sm font-medium hover:text-navy transition-colors">Initiatives</Link></li>
-        <li><Link href="/#governance" className="text-muted text-sm font-medium hover:text-navy transition-colors">Team</Link></li>
       </ul>
       <a href="mailto:hello@aaiimpact.org" className="hidden md:block text-muted hover:text-blue transition-colors font-bold text-[0.85rem] tracking-wide">
         hello@aaiimpact.org

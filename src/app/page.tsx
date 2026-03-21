@@ -6,7 +6,6 @@ import TechForward from "@/components/TechForward";
 import About from "@/components/About";
 import Programs from "@/components/Programs";
 import Initiatives from "@/components/Initiatives";
-import Governance from "@/components/Governance";
 import Why from "@/components/Why";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -22,7 +21,6 @@ export default function Home() {
       <About />
       <Programs />
       <Initiatives />
-      <Governance />
       <Why />
       <CTA />
       <Footer />

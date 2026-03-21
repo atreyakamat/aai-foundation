@@ -38,8 +38,8 @@ const programs = [
   {
     icon: Handshake,
     title: "Community Volunteering",
-    desc: "Connecting volunteers with NGOs and causes worldwide, with 60+ NGOs in the initial network and growing every month.",
-    tags: ["60+ NGOs", "Volunteer Network", "Social Impact"]
+    desc: "Connecting volunteers with NGOs and causes worldwide, with a growing network of organizations making an impact every month.",
+    tags: ["Global Network", "Volunteer Network", "Social Impact"]
   },
   {
     icon: Network,
